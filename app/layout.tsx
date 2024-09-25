@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import '@styles/globals.css'
 
 import Header from '@presentation/components/Header/Header'
+import Footer from '@presentation/components/Footer/Footer'
 
 export const metadata: Metadata = {
   title: 'A-SAFE Technical Test',
@@ -24,6 +25,7 @@ export default function RootLayout({
         >
           <Header />
           <main>{children}</main>
+          <Footer />
         </div>
       </body>
     </html>
