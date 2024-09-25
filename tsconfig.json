@@ -19,6 +19,7 @@
       "@infrastructure/*": ["src/infrastructure/*"],
       "@presentation/*": ["src/presentation/*"],
       "@shared/*": ["src/shared/*"],
+      "@svgs/*": ["public/svgs/*"],
       "@styles/*": ["styles/*"]
     },
     "plugins": [
