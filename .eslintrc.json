@@ -16,5 +16,13 @@
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "eqeqeq": ["error", "always"]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    }
   }
 }
