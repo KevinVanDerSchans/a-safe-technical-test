@@ -1,7 +1,7 @@
 export default function HomePage() {
   return (
-    <div>
+    <main className='flex items-center justify-center h-screen'>
       <h1>Home Page</h1>
-    </div>
+    </main>
   )
 }
