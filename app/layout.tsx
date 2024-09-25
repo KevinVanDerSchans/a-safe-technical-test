@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import '@styles/globals.css'
 
+import Header from '@presentation/components/Header/Header'
+
 export const metadata: Metadata = {
   title: 'A-SAFE Technical Test',
   description: 'Built with React, NextJS, TypeScript and Redux',
@@ -20,6 +22,7 @@ export default function RootLayout({
           role='region'
           aria-label='main-content'
         >
+          <Header />
           <main>{children}</main>
         </div>
       </body>
