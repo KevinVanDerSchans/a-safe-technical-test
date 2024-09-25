@@ -19,8 +19,9 @@
       "@infrastructure/*": ["src/infrastructure/*"],
       "@presentation/*": ["src/presentation/*"],
       "@shared/*": ["src/shared/*"],
-      "@svgs/*": ["public/svgs/*"],
-      "@styles/*": ["styles/*"]
+      "@types/*": ["src/shared/types/*"],
+      "@styles/*": ["styles/*"],
+      "@svgs/*": ["public/svgs/*"]
     },
     "plugins": [
       {
