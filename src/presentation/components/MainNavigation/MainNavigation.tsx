@@ -6,7 +6,7 @@ const MainNavigation = () => {
 
   return (
     <nav
-      aria-label='Main navigation'
+      aria-label='main navigation'
       data-testid='main-navigation'
       className='flex'
     >
