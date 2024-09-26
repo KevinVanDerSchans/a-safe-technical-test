@@ -25,6 +25,7 @@
       "@repositories/*": ["src/infrastructure/repositories/*"],
       "@components/*": ["src/presentation/components/*"],
       "@features/*": ["src/presentation/features/*"],
+      "@layouts/*": ["src/presentation/layouts/*"],
       "@sharedComponents/*": ["src/shared/components/*"],
       "@sharedTypes/*": ["src/shared/types/*"],
       "@constants/*": ["src/shared/constants/*"],
