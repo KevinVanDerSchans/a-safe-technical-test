@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import SVGS from '@shared/constants/svgs'
-import MainNavigation from '../MainNavigation/MainNavigation'
+import SVGS from '@constants/svgs'
+import MainNavigation from '@components/MainNavigation/MainNavigation'
 
 const Header = () => {
   return (

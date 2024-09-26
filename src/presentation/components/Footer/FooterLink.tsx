@@ -1,4 +1,4 @@
-import { ExternalLink } from '@shared/types/ExternalLink'
+import { ExternalLink } from '@sharedTypes/ExternalLink'
 
 interface Props {
   link: Readonly<ExternalLink>

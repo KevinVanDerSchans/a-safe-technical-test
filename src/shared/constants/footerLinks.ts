@@ -1,6 +1,5 @@
-import ICONS from '@shared/constants/icons'
-
-import { ExternalLink } from '@shared/types/ExternalLink'
+import ICONS from '@constants/icons'
+import { ExternalLink } from '@sharedTypes/ExternalLink'
 
 export const FOOTER_LINKS = (): readonly Readonly<ExternalLink>[] => [
   {

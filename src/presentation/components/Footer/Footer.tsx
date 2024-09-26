@@ -1,5 +1,5 @@
-import { FOOTER_LINKS } from '@shared/constants/footerLinks'
-import FooterLink from '@presentation/components/Footer/FooterLink'
+import { FOOTER_LINKS } from '@constants/footerLinks'
+import FooterLink from '@components/Footer/FooterLink'
 
 const Footer = () => {
   const footerLinks = FOOTER_LINKS()
