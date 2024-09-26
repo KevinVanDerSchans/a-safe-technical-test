@@ -10,6 +10,7 @@ const Header = () => {
       <div className='flex justify-between w-full'>
         <Link
           href='/'
+          aria-label='Home'
           className='flex items-center'
         >
           <figure className='flex items-center primary-hover-color-transition gap-x-4 hover:brightness-75'>

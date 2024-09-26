@@ -11,7 +11,7 @@ const Footer = () => {
     >
       <main className='fixed bottom-0 flex justify-between w-full h-16 px-8 bg-primary'>
         <nav
-          aria-label='footer'
+          aria-label='Links to my Portfolio, LinkedIn and GitHub'
           className='flex items-center w-full pl-4 gap-x-4'
         >
           <ul className='flex gap-x-4'>
