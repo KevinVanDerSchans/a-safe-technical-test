@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import SVGS from '@shared/constants/svgs'
-import MainNavigation from '../MainNavigation/MainNavigation'
+import SVGS from '@constants/svgs'
+import MainNavigation from '@components/MainNavigation/MainNavigation'
 
 const Header = () => {
   return (
@@ -10,6 +10,7 @@ const Header = () => {
       <div className='flex justify-between w-full'>
         <Link
           href='/'
+          aria-label='Home'
           className='flex items-center'
         >
           <figure className='flex items-center primary-hover-color-transition gap-x-4 hover:brightness-75'>

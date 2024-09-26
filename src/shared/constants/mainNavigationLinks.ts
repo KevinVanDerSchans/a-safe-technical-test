@@ -1,12 +1,11 @@
-import ICONS from '@shared/constants/icons'
-
-import { InternalLink } from '@shared/types/InternalLink'
+import ICONS from '@constants/icons'
+import { InternalLink } from '@sharedTypes/InternalLink'
 
 export const MAIN_NAVIGATION_LINKS = (): InternalLink[] => [
   {
     url: '/',
-    label: 'home',
-    ariaLabel: 'Home page',
+    label: 'Home',
+    ariaLabel: 'Go to Home page',
     icon: ICONS.HomeIcon,
     testId: 'link-go-to-home',
   },

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import '@styles/globals.css'
 
-import Header from '@presentation/components/Header/Header'
-import Footer from '@presentation/components/Footer/Footer'
+import Header from '@components/Header/Header'
+import Footer from '@components/Footer/Footer'
 
 export const metadata: Metadata = {
   title: 'A-SAFE Technical Test',

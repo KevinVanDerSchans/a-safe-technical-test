@@ -14,14 +14,27 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@application/*": ["src/application/*"],
-      "@domain/*": ["src/domain/*"],
-      "@infrastructure/*": ["src/infrastructure/*"],
-      "@presentation/*": ["src/presentation/*"],
-      "@shared/*": ["src/shared/*"],
-      "@types/*": ["src/shared/types/*"],
-      "@styles/*": ["styles/*"],
-      "@svgs/*": ["public/svgs/*"]
+      "@app/*": ["app/*"],
+      "@mappers/*": ["src/application/mappers/*"],
+      "@services/*": ["src/application/services/*"],
+      "@entities/*": ["src/domain/entities/*"],
+      "@interfaces/*": ["src/domain/interfaces/*"],
+      "@mainTypes/*": ["src/domain/types/*"],
+      "@api/*": ["src/infrastructure/api/*"],
+      "@redux/*": ["src/infrastructure/redux/*"],
+      "@repositories/*": ["src/infrastructure/repositories/*"],
+      "@components/*": ["src/presentation/components/*"],
+      "@features/*": ["src/presentation/features/*"],
+      "@sharedComponents/*": ["src/shared/components/*"],
+      "@sharedTypes/*": ["src/shared/types/*"],
+      "@constants/*": ["src/shared/constants/*"],
+      "@context/*": ["src/shared/context/*"],
+      "@utils/*": ["src/shared/utils/*"],
+
+      "@icons/*": ["public/icons/*"],
+      "@images/*": ["public/images/*"],
+      "@svgs/*": ["public/svgs/*"],
+      "@styles/*": ["styles/*"]
     },
     "plugins": [
       {

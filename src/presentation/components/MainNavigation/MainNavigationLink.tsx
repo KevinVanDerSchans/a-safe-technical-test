@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { InternalLink } from '@shared/types/InternalLink'
+import { InternalLink } from '@sharedTypes/InternalLink'
 
 interface Props {
   link: InternalLink

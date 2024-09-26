@@ -1,11 +1,10 @@
-import ICONS from '@shared/constants/icons'
-
-import { ExternalLink } from '@shared/types/ExternalLink'
+import ICONS from '@constants/icons'
+import { ExternalLink } from '@sharedTypes/ExternalLink'
 
 export const FOOTER_LINKS = (): readonly Readonly<ExternalLink>[] => [
   {
     href: 'https://kevin-van-der-schans.vercel.app',
-    ariaLabel: 'porfolio',
+    ariaLabel: 'Visit my Portfolio',
     icon: ICONS.PortfolioIcon,
     target: '_blank',
     testId: 'portfolio',
@@ -13,7 +12,7 @@ export const FOOTER_LINKS = (): readonly Readonly<ExternalLink>[] => [
   },
   {
     href: 'https://www.linkedin.com/in/kevinvanderschans',
-    ariaLabel: 'linkedin',
+    ariaLabel: 'Visit my LinkedIn',
     icon: ICONS.LinkedInIcon,
     target: '_blank',
     testId: 'linkedin',
@@ -21,7 +20,7 @@ export const FOOTER_LINKS = (): readonly Readonly<ExternalLink>[] => [
   },
   {
     href: 'https://github.com/KevinVanDerSchans?tab=repositories',
-    ariaLabel: 'github',
+    ariaLabel: 'Visit my GitHub',
     icon: ICONS.GitHubIcon,
     target: '_blank',
     testId: 'github',
