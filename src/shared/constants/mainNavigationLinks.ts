@@ -3,7 +3,7 @@ import { InternalLink } from '@sharedTypes/InternalLink'
 
 export const MAIN_NAVIGATION_LINKS = (): InternalLink[] => [
   {
-    url: '/',
+    url: '/login',
     label: 'Home',
     ariaLabel: 'Go to Home page',
     icon: ICONS.HomeIcon,
