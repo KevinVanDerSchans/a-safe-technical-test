@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import '@styles/globals.css'
 
-import Header from '@components/Header/Header'
-import Footer from '@components/Footer/Footer'
+import Providers from '@context/Providers'
+import MainLayout from '@layouts/MainLayout'
 
 export const metadata: Metadata = {
   title: 'A-SAFE Technical Test',
@@ -19,14 +19,9 @@ export default function RootLayout({
     <html lang='en'>
       <head></head>
       <body>
-        <div
-          role='region'
-          aria-label='main-content'
-        >
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <Providers>
+          <MainLayout>{children}</MainLayout>
+        </Providers>
       </body>
     </html>
   )
