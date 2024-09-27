@@ -10,8 +10,8 @@ export default function HomePage() {
           content='Built with React, NextJS, TypeScript and Redux'
         />
       </Head>
-      <main>
-        <h1>Welcome to A-SAFE Technical Test</h1>
+      <main className='flex items-center justify-center h-screen'>
+        <h1>HomePage</h1>
       </main>
     </>
   )
