@@ -3,7 +3,7 @@ import { PluginAPI } from 'tailwindcss/types/config'
 
 const config: Config = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/presentation/**/*.{js,ts,jsx,tsx,mdx}',
