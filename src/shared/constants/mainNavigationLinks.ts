@@ -16,4 +16,11 @@ export const MAIN_NAVIGATION_LINKS = (): InternalLink[] => [
     icon: ICONS.LoginIcon,
     testId: 'link-to-login',
   },
+  {
+    url: '/api/auth/signout',
+    label: 'Logout',
+    ariaLabel: 'Logout',
+    icon: ICONS.IoMdLogOut,
+    testId: 'logout',
+  },
 ]
