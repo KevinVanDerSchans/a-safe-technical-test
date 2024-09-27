@@ -14,7 +14,8 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@app/*": ["app/*"],
+      "@app/*": ["src/app/*"],
+      "@pages/*": ["pages/*"],
       "@mappers/*": ["src/application/mappers/*"],
       "@services/*": ["src/application/services/*"],
       "@entities/*": ["src/domain/entities/*"],
@@ -25,12 +26,12 @@
       "@repositories/*": ["src/infrastructure/repositories/*"],
       "@components/*": ["src/presentation/components/*"],
       "@features/*": ["src/presentation/features/*"],
+      "@layouts/*": ["src/presentation/layouts/*"],
       "@sharedComponents/*": ["src/shared/components/*"],
       "@sharedTypes/*": ["src/shared/types/*"],
       "@constants/*": ["src/shared/constants/*"],
       "@context/*": ["src/shared/context/*"],
       "@utils/*": ["src/shared/utils/*"],
-
       "@icons/*": ["public/icons/*"],
       "@images/*": ["public/images/*"],
       "@svgs/*": ["public/svgs/*"],
@@ -40,7 +41,8 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["next.config.mjs", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
