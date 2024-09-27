@@ -1,8 +1,10 @@
 import { MAIN_NAVIGATION_LINKS } from '@constants/mainNavigationLinks'
 import MainNavigationLink from '@components/MainNavigation/MainNavigationLink'
+import { useSession } from 'next-auth/react'
 
 const MainNavigation = () => {
-  const mainNavigationLinks = MAIN_NAVIGATION_LINKS()
+  const { data: session } = useSession()
+  const mainNavigationLinks = MAIN_NAVIGATION_LINKS(session)
 
   return (
     <nav
