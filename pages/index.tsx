@@ -1,6 +1,7 @@
 import Head from 'next/head'
+import HomePage from '@pages/home/index'
 
-export default function HomePage() {
+export default function App() {
   return (
     <>
       <Head>
@@ -11,7 +12,7 @@ export default function HomePage() {
         />
       </Head>
       <main className='flex items-center justify-center h-screen'>
-        <h1>HomePage</h1>
+        <HomePage />
       </main>
     </>
   )

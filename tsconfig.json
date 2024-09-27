@@ -15,6 +15,7 @@
     "baseUrl": ".",
     "paths": {
       "@app/*": ["src/app/*"],
+      "@pages/*": ["pages/*"],
       "@mappers/*": ["src/application/mappers/*"],
       "@services/*": ["src/application/services/*"],
       "@entities/*": ["src/domain/entities/*"],
