@@ -20,6 +20,7 @@ const config: Config = {
         dark: '#000',
 
         greyBackground: '#c5c5c54d',
+        errorMessage: '#dc2626',
 
         background: 'var(--background)',
         foreground: 'var(--foreground)',
