@@ -1,6 +1,22 @@
+'use client'
 import Head from 'next/head'
+import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 
-export default function Dashboard() {
+export default function ClientPage() {
+  const { data: session, status } = useSession({
+    required: true,
+    onUnauthenticated() {
+      router.push('/api/auth/signin?callbackUrl=/client')
+    },
+  })
+
+  const router = useRouter()
+
+  if (status === 'loading') {
+    return <p>Loading...</p>
+  }
+
   return (
     <>
       <Head>
@@ -10,7 +26,9 @@ export default function Dashboard() {
           content='Built with React, NextJS, TypeScript and Redux'
         />
       </Head>
-      <main className='flex items-center justify-center h-screen'>Dashboard Page</main>
+      <main className='flex items-center justify-center h-screen'>
+        {session ? <span>se te permite verlo</span> : <span>debes hacer login</span>}
+      </main>
     </>
   )
 }
