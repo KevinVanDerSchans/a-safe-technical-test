@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "tailwind:build": "tailwindcss -i ./styles/globals.css -o ./styles/styles.css",
     "prepare": "husky install"
   },
   "dependencies": {
