@@ -1,13 +1,13 @@
 import { getSession } from 'next-auth/react'
 import { GetServerSidePropsContext } from 'next'
 
-export const checkSessionService = async (context: GetServerSidePropsContext) => {
+export const checkDashboardPageSession = async (context: GetServerSidePropsContext) => {
   const session = await getSession(context)
 
   if (!session) {
     return {
       redirect: {
-        destination: '/api/auth/signin?callbackUrl=/dashboard',
+        destination: '/api/auth/signin',
         permanent: false,
       },
     }
