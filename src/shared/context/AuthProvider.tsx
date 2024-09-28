@@ -1,6 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import { SessionProvider } from 'next-auth/react'
 
-export default function AuthProvider({ children }: { children: React.ReactNode }) {
-  return <SessionProvider>{children}</SessionProvider>
+interface AuthProviderProps {
+  children: React.ReactNode
+  session: any
+}
+
+export default function AuthProvider({ children, session }: AuthProviderProps) {
+  return <SessionProvider session={session}>{children}</SessionProvider>
 }

@@ -3,9 +3,9 @@ import AuthProvider from '@context/AuthProvider'
 import MainLayout from '@layouts/MainLayout'
 import '@styles/globals.css'
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
-    <AuthProvider>
+    <AuthProvider session={session}>
       <MainLayout>
         <Component {...pageProps} />
       </MainLayout>
