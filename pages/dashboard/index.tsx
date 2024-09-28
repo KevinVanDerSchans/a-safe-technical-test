@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 import { useSession } from 'next-auth/react'
-import { checkSessionService } from '@app/services/checkSessionService'
+import { checkDashboardPageSession } from '@app/services/checkDashboardPageSession'
 
 export default function DashboardPage() {
   const { data: session } = useSession()
@@ -23,5 +23,5 @@ export default function DashboardPage() {
 }
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  return await checkSessionService(context)
+  return await checkDashboardPageSession(context)
 }
