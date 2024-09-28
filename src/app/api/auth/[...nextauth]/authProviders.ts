@@ -1,11 +1,7 @@
-import GitHubProvider from 'next-auth/providers/github'
 import CredentialsProvider from 'next-auth/providers/credentials'
+import GitHubProvider from 'next-auth/providers/github'
 
 export const authProviders = [
-  GitHubProvider({
-    clientId: process.env.GITHUB_ID as string,
-    clientSecret: process.env.GITHUB_SECRET as string,
-  }),
   CredentialsProvider({
     name: 'Credentials',
     credentials: {
@@ -30,5 +26,9 @@ export const authProviders = [
         return null
       }
     },
+  }),
+  GitHubProvider({
+    clientId: process.env.GITHUB_ID as string,
+    clientSecret: process.env.GITHUB_SECRET as string,
   }),
 ]
