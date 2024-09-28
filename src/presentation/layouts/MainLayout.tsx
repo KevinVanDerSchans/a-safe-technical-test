@@ -7,14 +7,11 @@ interface MainLayoutProps {
 
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <div
-      role='region'
-      aria-label='main-content'
-    >
+    <>
       <Header />
       <main>{children}</main>
       <Footer />
-    </div>
+    </>
   )
 }
 
