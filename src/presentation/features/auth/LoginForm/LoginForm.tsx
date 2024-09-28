@@ -5,13 +5,13 @@ import { useRouter } from 'next/router'
 
 import ICONS from '@constants/icons'
 import ForgotCredentials from '@features/auth/LoginForm/ForgotCredentials'
+import { showLoginSuccessAlert, showLoginErrorAlert } from '@utils/sweetalert2/sweetAlertConfig'
 
 const LoginForm = () => {
   const router = useRouter()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -22,10 +22,11 @@ const LoginForm = () => {
       password,
     })
 
-    if (result?.error) {
-      setError('Error, try it again please')
-    } else {
+    if (result?.ok) {
+      showLoginSuccessAlert()
       router.push('/')
+    } else {
+      showLoginErrorAlert()
     }
   }
 
@@ -95,8 +96,6 @@ const LoginForm = () => {
         >
           Sign in
         </button>
-
-        {error && <p className='text-center text-errorMessage'>{error}</p>}
       </form>
 
       <ForgotCredentials />
