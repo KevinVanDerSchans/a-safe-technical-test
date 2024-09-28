@@ -1,21 +1,10 @@
-'use client'
 import Head from 'next/head'
+import { GetServerSideProps } from 'next'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { checkSessionService } from '@app/services/checkSessionService'
 
-export default function ClientPage() {
-  const { data: session, status } = useSession({
-    required: true,
-    onUnauthenticated() {
-      router.push('/api/auth/signin?callbackUrl=/client')
-    },
-  })
-
-  const router = useRouter()
-
-  if (status === 'loading') {
-    return <p>Loading...</p>
-  }
+export default function DashboardPage() {
+  const { data: session } = useSession()
 
   return (
     <>
@@ -31,4 +20,8 @@ export default function ClientPage() {
       </main>
     </>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async context => {
+  return await checkSessionService(context)
 }
