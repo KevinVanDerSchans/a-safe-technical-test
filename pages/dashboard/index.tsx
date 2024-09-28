@@ -27,7 +27,7 @@ export default function ClientPage() {
         />
       </Head>
       <main className='flex items-center justify-center h-screen'>
-        {session ? <span>se te permite verlo</span> : <span>debes hacer login</span>}
+        {session ? <span>Dashboard</span> : <span>You have to be logged!</span>}
       </main>
     </>
   )
