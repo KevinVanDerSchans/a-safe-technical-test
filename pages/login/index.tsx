@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { GetServerSideProps } from 'next'
+import { checkLoginPageSession } from '@app/services/checkLoginPageSession'
 import LoginForm from '@features/auth/LoginForm/LoginForm'
 
 export default function LoginPage() {
@@ -16,4 +18,8 @@ export default function LoginPage() {
       </main>
     </>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async context => {
+  return await checkLoginPageSession(context)
 }
