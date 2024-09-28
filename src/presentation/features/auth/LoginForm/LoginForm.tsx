@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { signIn } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router'
 
 import ICONS from '@constants/icons'
 import ForgotCredentials from '@features/auth/LoginForm/ForgotCredentials'

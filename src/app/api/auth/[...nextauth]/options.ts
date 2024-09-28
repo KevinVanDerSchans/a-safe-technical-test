@@ -21,7 +21,11 @@ export const options: NextAuthOptions = {
         },
       },
       async authorize(credentials) {
-        const user = { id: '42', email: 'kevinvdsd@hotmail.com', password: '123' }
+        const user = {
+          id: process.env.AUTH_USER_ID as string,
+          email: process.env.AUTH_USER_EMAIL as string,
+          password: process.env.AUTH_USER_PASSWORD as string,
+        }
 
         if (credentials?.email === user.email && credentials?.password === user.password) {
           return user
@@ -31,6 +35,9 @@ export const options: NextAuthOptions = {
       },
     }),
   ],
+  session: {
+    strategy: 'jwt',
+  },
   pages: {
     signIn: '/login',
   },
