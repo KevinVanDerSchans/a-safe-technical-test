@@ -1,6 +1,6 @@
+import { useSession } from 'next-auth/react'
 import { MAIN_NAVIGATION_LINKS } from '@constants/mainNavigationLinks'
 import MainNavigationLink from '@components/MainNavigation/MainNavigationLink'
-import { useSession } from 'next-auth/react'
 
 const MainNavigation = () => {
   const { data: session } = useSession()

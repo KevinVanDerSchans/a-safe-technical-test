@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import SVGS from '@constants/svgs'
 import MainNavigation from '@components/MainNavigation/MainNavigation'
+import ThemeToggleButton from '@components/ThemeToggleButton/ThemeToggleButton'
 
 const Header = () => {
   return (
@@ -25,6 +26,7 @@ const Header = () => {
       </div>
 
       <nav className='flex gap-x-6'>
+        <ThemeToggleButton />
         <MainNavigation />
       </nav>
     </header>
