@@ -18,7 +18,7 @@ const FooterLink = ({ link: { href, icon: Icon, ariaLabel, target, testId, rel }
       <Icon
         data-testid={`${testId}-icon`}
         aria-hidden='true'
-        className='text-2xl primary-hover-color-transition text-light'
+        className='text-2xl primary-hover-color-transition'
       />
     </a>
   )

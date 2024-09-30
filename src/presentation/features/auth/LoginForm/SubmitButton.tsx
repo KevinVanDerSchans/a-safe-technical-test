@@ -9,7 +9,7 @@ const SubmitButton = ({ label }: SubmitButtonProps) => (
     aria-label={label}
     className='w-full py-2 mt-4 text-sm uppercase cursor-pointer primary-hover-button-transition'
   >
-    {label}
+    <span>{label}</span>
   </button>
 )
 
