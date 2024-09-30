@@ -2,13 +2,8 @@ import type { Config } from 'tailwindcss'
 import { PluginAPI } from 'tailwindcss/types/config'
 
 const config: Config = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/presentation/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/shared/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  mode: 'jit',
+  content: ['./pages/**/*.{js,ts,jsx,tsx,mdx}', './src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       colors: {
@@ -30,6 +25,18 @@ const config: Config = {
   plugins: [
     function ({ addUtilities }: PluginAPI) {
       addUtilities({
+        '.theme-light': {
+          '--background': '#ffffff',
+          '--foreground': '#000000',
+        },
+        '.theme-dark': {
+          '--background': '#000000',
+          '--foreground': '#ffffff',
+        },
+        '.theme-solarized': {
+          '--background': '#3df6e3',
+          '--foreground': '#657b83',
+        },
         '.primary-hover-color-transition': {
           'transition-property': 'color',
           'transition-duration': '500ms',
