@@ -20,19 +20,19 @@ const ThemeSelector = () => {
       >
         <option
           value='light'
-          className='text-[var(--light)]'
+          className='text-[var(--foreground)]'
         >
           Light
         </option>
         <option
           value='dark'
-          className='text-[var(--light)]'
+          className='text-[var(--foreground)]'
         >
           Dark
         </option>
         <option
           value='solarized'
-          className='text-[var(--light)]'
+          className='text-[var(--foreground)]'
         >
           Solarized
         </option>
