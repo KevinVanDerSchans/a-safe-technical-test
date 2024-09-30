@@ -1,33 +1,27 @@
 const themeConfig = {
   light: {
-    background: '#ffffff', // Color de fondo oscuro
-    foreground: '#0284c7', // Color de texto claro
-    primary: '#000000', // Elementos principales
-    secondary: '#ffffff', // Elementos secundarios
-    accent: '#1d4ed8', // Para resaltar
-    muted: '#9ca3af', // Textos secundarios
-    light: '#fff',
-    dark: '#000',
+    background: '#fff', // Color de fondo oscuro
+    foreground: '#6b7270', // Color de texto claro
+    primary: '#000', // Elementos principales
+    secondary: '#fff', // Elementos secundarios
+    accent: '#0284c7', // Para resaltar
+    muted: '#c5c5c54d', // Textos secundarios
   },
   dark: {
     background: '#1f2937',
-    foreground: '#d1d5db',
+    foreground: '#000',
     primary: '#9ca3af',
-    secondary: '#374151',
+    secondary: '#fff',
     accent: '#4f46e5',
     muted: '#6b7280',
-    light: '#000',
-    dark: '#fff',
   },
   solarized: {
     background: '#f4ecd8',
-    foreground: '#000000',
+    foreground: '#000',
     primary: '#d49a6a',
-    secondary: '#b5835a',
+    secondary: '#fff',
     accent: '#e07a5f',
     muted: '#cfc1b0',
-    light: '#000',
-    dark: '#fff',
   },
 }
 
