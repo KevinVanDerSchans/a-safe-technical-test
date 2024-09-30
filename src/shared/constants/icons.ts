@@ -4,6 +4,7 @@ import { MdOutlineArticle as HomeIcon, MdOutlinePassword as PasswordIcon } from 
 import { RiAdminLine as LoginIcon, RiUserHeartLine as LoggedIcon } from 'react-icons/ri'
 import { VscDashboard } from 'react-icons/vsc'
 import { IoMdLogOut } from 'react-icons/io'
+import { FaUsers } from 'react-icons/fa6'
 
 const ICONS = {
   HomeIcon,
@@ -16,6 +17,7 @@ const ICONS = {
   LinkedInIcon,
   EmailIcon,
   PasswordIcon,
+  FaUsers,
 }
 
 export default ICONS
