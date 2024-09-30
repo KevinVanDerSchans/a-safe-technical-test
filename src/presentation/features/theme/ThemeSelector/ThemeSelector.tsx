@@ -18,9 +18,24 @@ const ThemeSelector = () => {
         aria-label='Select a theme'
         className='primary-hover-button-transition rounded-sm focus:outline-none'
       >
-        <option value='light'>Light</option>
-        <option value='dark'>Dark</option>
-        <option value='solarized'>Solarized</option>
+        <option
+          value='light'
+          className='text-[var(--light)]'
+        >
+          Light
+        </option>
+        <option
+          value='dark'
+          className='text-[var(--light)]'
+        >
+          Dark
+        </option>
+        <option
+          value='solarized'
+          className='text-[var(--light)]'
+        >
+          Solarized
+        </option>
       </select>
     </div>
   )

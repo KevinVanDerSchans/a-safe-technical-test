@@ -6,6 +6,8 @@ const themeConfig = {
     secondary: '#ffffff', // Elementos secundarios
     accent: '#1d4ed8', // Para resaltar
     muted: '#9ca3af', // Textos secundarios
+    light: '#fff',
+    dark: '#000',
   },
   dark: {
     background: '#1f2937',
@@ -14,6 +16,8 @@ const themeConfig = {
     secondary: '#374151',
     accent: '#4f46e5',
     muted: '#6b7280',
+    light: '#000',
+    dark: '#fff',
   },
   solarized: {
     background: '#f4ecd8',
@@ -22,6 +26,8 @@ const themeConfig = {
     secondary: '#b5835a',
     accent: '#e07a5f',
     muted: '#cfc1b0',
+    light: '#000',
+    dark: '#fff',
   },
 }
 

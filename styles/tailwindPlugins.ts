@@ -45,7 +45,7 @@ export const tailwindPlugins = ({ addBase, addUtilities, theme }: PluginAPI) => 
       'font-weight': 'semibold',
       '&:hover': {
         'background-color': 'var(--acent)',
-        color: 'var(--accent)',
+        color: 'var(--foreground)',
         'font-weight': 'semibold',
       },
     },
