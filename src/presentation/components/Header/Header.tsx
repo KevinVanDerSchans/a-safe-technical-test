@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import SVGS from '@constants/svgs'
-import ThemeSelector from '@components/ThemeSelector/ThemeSelector'
+import ThemeSelector from '@features/theme/ThemeSelector/ThemeSelector'
 import MainNavigation from '@components/MainNavigation/MainNavigation'
 
 const Header = () => {

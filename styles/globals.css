@@ -6,8 +6,8 @@ body,
 html {
   height: 100%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: var(--foreground);
   background-color: var(--background);
+  color: var(--foreground);
   scroll-behavior: smooth;
 }
 
