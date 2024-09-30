@@ -13,7 +13,7 @@ const LoginForm = () => {
       <form
         onSubmit={handleSubmit}
         role='form'
-        className='p-12 bg-greyBackground w-80'
+        className='p-12 bg-[var(--muted)] w-80'
       >
         <EmailInput
           email={email}

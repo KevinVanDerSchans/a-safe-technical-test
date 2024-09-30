@@ -34,7 +34,7 @@ export const tailwindPlugins = ({ addBase, addUtilities, theme }: PluginAPI) => 
       'transition-duration': '500ms',
       color: 'var(--secondary)',
       '&:hover': {
-        color: 'var(--acent)',
+        color: 'var(--accent)',
       },
     },
     '.primary-hover-button-transition': {
@@ -45,7 +45,7 @@ export const tailwindPlugins = ({ addBase, addUtilities, theme }: PluginAPI) => 
       'font-weight': 'semibold',
       '&:hover': {
         'background-color': 'var(--acent)',
-        color: 'var(--foreground)',
+        color: 'var(--dark)',
         'font-weight': 'semibold',
       },
     },
