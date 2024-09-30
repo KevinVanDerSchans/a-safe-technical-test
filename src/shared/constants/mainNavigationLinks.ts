@@ -13,11 +13,11 @@ export const MAIN_NAVIGATION_LINKS = (session: any): InternalLink[] => {
         testId: 'link-go-to-dashboard',
       },
       {
-        url: '/',
-        label: 'Home',
-        ariaLabel: 'Go to Home page',
-        icon: ICONS.HomeIcon,
-        testId: 'link-go-to-home',
+        url: '/users',
+        label: 'Users',
+        ariaLabel: 'Go to Users page',
+        icon: ICONS.FaUsers,
+        testId: 'link-go-to-users',
       },
       {
         url: '/api/auth/signout',
