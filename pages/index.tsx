@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>A-SAFE Technical Test</title>
+        <title>A-SAFE DIGITAL</title>
         <meta
           name='description'
           content='Built with React, NextJS, TypeScript and Redux'

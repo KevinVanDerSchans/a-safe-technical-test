@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 import { useSession } from 'next-auth/react'
-import { checkDashboardPageSession } from '@app/services/checkDashboardPageSession'
+import { checkDashboardPageSession } from '@app/services/auth/checkDashboardPageSession'
 
 export default function DashboardPage() {
   const { data: session } = useSession()
@@ -10,7 +10,7 @@ export default function DashboardPage() {
   return (
     <>
       <Head>
-        <title>A-SAFE Technical Test - Dashboard</title>
+        <title>A-SAFE DIGITAL - Dashboard</title>
         <meta
           name='description'
           content='Built with React, NextJS, TypeScript and Redux'
