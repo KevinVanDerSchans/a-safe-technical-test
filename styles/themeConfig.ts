@@ -11,7 +11,7 @@ const themeConfig = {
     background: '#1f2937',
     foreground: '#000',
     primary: '#9ca3af',
-    secondary: '#fff',
+    secondary: '#374151',
     accent: '#4f46e5',
     muted: '#6b7280',
   },

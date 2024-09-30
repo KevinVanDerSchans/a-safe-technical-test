@@ -28,7 +28,7 @@ const EmailInput = ({ email, setEmail }: EmailInputProps) => (
       autoComplete='email'
       placeholder='E-mail address'
       aria-label='Corporate email address input'
-      className='placeholder:text-[var(--dark)] w-full p-2 my-2 text-center focus:outline-none'
+      className='w-full p-2 my-2 text-center focus:outline-none'
     />
   </div>
 )
