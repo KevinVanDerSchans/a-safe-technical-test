@@ -16,12 +16,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: linear-gradient(#fff, #fff, #fff);
+  background: linear-gradient(#000, #808080, #000);
 }
 
 body::-webkit-scrollbar-thumb {
   height: 5rem;
-  background-color: #fff;
+  background-color: var(--accent);
 }
 
 @layer utilities {
