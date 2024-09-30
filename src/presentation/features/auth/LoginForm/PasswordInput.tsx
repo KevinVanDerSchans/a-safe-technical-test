@@ -27,7 +27,7 @@ const PasswordInput = ({ password, setPassword }: PasswordInputProps) => (
       required
       placeholder='Enter your given password'
       aria-label='Password input'
-      className='w-full py-2 my-2 text-center bg-light focus:outline-none'
+      className='placeholder:text-[var(--dark)] w-full py-2 my-2 text-center focus:outline-none'
     />
   </div>
 )
