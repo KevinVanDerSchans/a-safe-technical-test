@@ -1,65 +1,27 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable react-hooks/exhaustive-deps */
-import { createContext, useContext, useState, ReactNode, useEffect } from 'react'
+import { createContext, useContext, ReactNode } from 'react'
+import { useTheme } from '@features/theme/hooks/useTheme'
 
-interface ThemeContextProps {
+interface ThemeContextType {
   theme: string
-  toggleTheme: () => void
-  setTheme: (theme: string) => void
+  changeTheme: (newTheme: string) => void
+  handleThemeChange: (event: React.ChangeEvent<HTMLSelectElement>) => void
 }
 
-const ThemeContext = createContext<ThemeContextProps | undefined>(undefined)
-
-const themes = ['light', 'dark', 'solarized']
+const ThemeContext = createContext<ThemeContextType | null>(null)
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setThemeState] = useState('light')
+  const { theme, changeTheme, handleThemeChange } = useTheme()
 
-  const themeStyles: Record<string, { '--background': string; '--foreground': string }> = {
-    light: {
-      '--background': '#ffffff',
-      '--foreground': '#000000',
-    },
-    dark: {
-      '--background': '#000000',
-      '--foreground': '#ffffff',
-    },
-    solarized: {
-      '--background': '#3df6e3',
-      '--foreground': '#657b83',
-    },
-  }
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme') || 'light'
-    setThemeState(storedTheme)
-    document.body.style.setProperty('--background', themeStyles[storedTheme]['--background'])
-    document.body.style.setProperty('--foreground', themeStyles[storedTheme]['--foreground'])
-  }, [])
-
-  useEffect(() => {
-    document.body.style.setProperty('--background', themeStyles[theme]['--background'])
-    document.body.style.setProperty('--foreground', themeStyles[theme]['--foreground'])
-    localStorage.setItem('theme', theme)
-  }, [theme])
-
-  const setTheme = (newTheme: string) => {
-    setThemeState(newTheme)
-  }
-
-  const toggleTheme = () => {
-    const currentIndex = themes.indexOf(theme)
-    const nextIndex = (currentIndex + 1) % themes.length
-    setTheme(themes[nextIndex])
-  }
-
-  return <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>{children}</ThemeContext.Provider>
+  return <ThemeContext.Provider value={{ theme, changeTheme, handleThemeChange }}>{children}</ThemeContext.Provider>
 }
 
-export const useTheme = () => {
+export const useThemeContext = () => {
   const context = useContext(ThemeContext)
+
   if (!context) {
-    throw new Error('useTheme debe ser usado dentro de ThemeProvider')
+    throw new Error('useThemeContext must be used within a ThemeProvider')
   }
+
   return context
 }
