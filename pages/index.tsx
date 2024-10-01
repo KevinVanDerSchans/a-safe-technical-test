@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import PostsList from '@features/posts/PostsList'
 
 export default function HomePage() {
   return (
@@ -11,8 +12,8 @@ export default function HomePage() {
           content='Built with React, NextJS, TypeScript and Redux'
         />
       </Head>
-      <main className='flex items-center justify-center h-screen'>
-        <h1>Home Page</h1>
+      <main className='flex items-center justify-center'>
+        <PostsList />
       </main>
     </>
   )
