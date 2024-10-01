@@ -11,15 +11,15 @@ html {
   scroll-behavior: smooth;
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: linear-gradient(#000, #808080, #000);
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   height: 5rem;
   background-color: var(--accent);
 }
