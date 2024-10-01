@@ -12,12 +12,9 @@ export function usePosts() {
   const { posts, status } = useSelector((state: RootState) => state.posts)
   const dispatch = useDispatch<AppDispatch>()
 
-  const loadPosts = useCallback(
-    async (filter?: string) => {
-      await dispatch(getPostsAsync({ repo, filter }))
-    },
-    [repo, dispatch]
-  )
+  const loadPosts = useCallback(async () => {
+    await dispatch(getPostsAsync({ repo }))
+  }, [repo, dispatch])
 
   return {
     loadPosts,
