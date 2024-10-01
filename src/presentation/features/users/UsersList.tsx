@@ -1,5 +1,4 @@
-import React from 'react'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 import { useUsers } from '@features/users/hooks/useUsers'
 import { UserCard } from '@features/users/UserCard'
