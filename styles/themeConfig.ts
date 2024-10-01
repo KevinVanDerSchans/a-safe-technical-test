@@ -5,6 +5,7 @@ const themeConfig = {
     primary: '#000', // Elementos principales
     secondary: '#fff', // Elementos secundarios
     accent: '#0284c7', // Para resaltar
+    accentLight: '#5ec6ff', // Para resaltar - claro
     muted: '#c5c5c54d', // Textos secundarios
   },
   dark: {
@@ -13,6 +14,7 @@ const themeConfig = {
     primary: '#9ca3af',
     secondary: '#374151',
     accent: '#4f46e5',
+    accentLight: '#4f46e5',
     muted: '#6b7280',
   },
   solarized: {
@@ -21,6 +23,7 @@ const themeConfig = {
     primary: '#d49a6a',
     secondary: '#fff',
     accent: '#e07a5f',
+    accentLight: '#f2b8a6',
     muted: '#cfc1b0',
   },
 }

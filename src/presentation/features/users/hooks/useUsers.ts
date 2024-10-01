@@ -2,7 +2,7 @@ import { useCallback, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { NEXT_PUBLIC_API_URL } from '@config/env'
-import { UsersRepository } from '@app/services/users/UsersRepository'
+import { UsersRepository } from '@repositories/users/UsersRepository'
 import { RootState, AppDispatch } from '@redux/store/store'
 import { getUsersAsync } from '@redux/slices/users/usersThunks'
 
