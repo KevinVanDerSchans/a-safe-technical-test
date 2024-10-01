@@ -22,6 +22,7 @@
       "@interfaces/*": ["src/domain/interfaces/*"],
       "@mainTypes/*": ["src/domain/types/*"],
       "@api/*": ["src/infrastructure/api/*"],
+      "@config/*": ["src/infrastructure/config/*"],
       "@redux/*": ["src/infrastructure/redux/*"],
       "@repositories/*": ["src/infrastructure/repositories/*"],
       "@components/*": ["src/presentation/components/*"],
