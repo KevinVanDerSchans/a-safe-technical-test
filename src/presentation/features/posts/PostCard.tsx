@@ -31,7 +31,7 @@ export function PostCard({ item, userName }: PropsType) {
         <h2 className='text-center text-lg line-clamp-3'>{title.toUpperCase()}</h2>
       </div>
 
-      <div className='hr w-10 bg-[var(--primary)] h-[1px] my-4'></div>
+      <div className='w-10 bg-[var(--primary)] h-[1px] my-4'></div>
 
       <p className='text-xs leading-5 line-clamp-3 my-4'>{body.toUpperCase()}</p>
     </li>
