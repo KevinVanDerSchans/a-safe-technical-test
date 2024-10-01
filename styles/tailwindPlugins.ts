@@ -8,6 +8,7 @@ export const tailwindPlugins = ({ addBase, addUtilities, theme }: PluginAPI) => 
       '--primary': theme('colors.light.primary'),
       '--secondary': theme('colors.light.secondary'),
       '--accent': theme('colors.light.accent'),
+      '--accentLight': theme('colors.light.accentLight'),
       '--muted': theme('colors.light.muted'),
     },
     '[data-theme="dark"]': {
@@ -16,6 +17,7 @@ export const tailwindPlugins = ({ addBase, addUtilities, theme }: PluginAPI) => 
       '--primary': theme('colors.dark.primary'),
       '--secondary': theme('colors.dark.secondary'),
       '--accent': theme('colors.dark.accent'),
+      '--accentLight': theme('colors.dark.accentLight'),
       '--muted': theme('colors.dark.muted'),
     },
     '[data-theme="solarized"]': {
@@ -24,6 +26,7 @@ export const tailwindPlugins = ({ addBase, addUtilities, theme }: PluginAPI) => 
       '--primary': theme('colors.solarized.primary'),
       '--secondary': theme('colors.solarized.secondary'),
       '--accent': theme('colors.solarized.accent'),
+      '--accentLight': theme('colors.solarized.accentLight'),
       '--muted': theme('colors.solarized.muted'),
     },
   })
@@ -47,6 +50,14 @@ export const tailwindPlugins = ({ addBase, addUtilities, theme }: PluginAPI) => 
         'background-color': 'var(--acent)',
         color: 'var(--dark)',
         'font-weight': 'semibold',
+      },
+    },
+    '.primary-hover-card-transition': {
+      'box-shadow': '0 0 20px rgba(65, 11, 31, 0.3)',
+      'transition-property': 'all',
+      'transition-duration': '300ms',
+      '&:hover': {
+        'box-shadow': '0 0 20px rgba(65, 11, 31, 0.9)',
       },
     },
     '.primary-hover-scale-up': {

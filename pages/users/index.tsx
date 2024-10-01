@@ -17,7 +17,7 @@ export default function UsersPage() {
           content='Built with React, NextJS, TypeScript and Redux'
         />
       </Head>
-      <main className='flex items-center justify-center py-12'>
+      <main className='flex items-center justify-center'>
         {session ? <UsersList /> : <span>You have to be logged!</span>}
       </main>
     </>

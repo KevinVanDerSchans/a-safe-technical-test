@@ -14,12 +14,16 @@ export default function UsersList() {
 
   return (
     <>
-      {status === 'idle' && <MainSpinner />}
+      {status === 'idle' && (
+        <main className='flex items-center justify-center min-h-screen'>
+          <MainSpinner />
+        </main>
+      )}
 
       {status === 'loaded' && (
         <ul
           role='list'
-          className='list-none flex flex-col flex-grow items-center justify-center w-full py-12'
+          className='list-none flex flex-col flex-grow items-center justify-center w-full py-20'
         >
           {users.map(item => (
             <UserCard

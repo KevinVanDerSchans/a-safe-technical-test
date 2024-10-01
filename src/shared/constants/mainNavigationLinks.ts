@@ -31,13 +31,6 @@ export const MAIN_NAVIGATION_LINKS = (session: any): InternalLink[] => {
 
   return [
     {
-      url: '/',
-      label: 'Home',
-      ariaLabel: 'Go to Home page',
-      icon: ICONS.HomeIcon,
-      testId: 'link-go-to-home',
-    },
-    {
       url: '/api/auth/signin',
       label: 'Login',
       ariaLabel: 'Go to Login page',

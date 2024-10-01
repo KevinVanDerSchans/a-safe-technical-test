@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 
 import { User } from '@entities/User'
-import { UsersRepository } from '@app/services/users/UsersRepository'
+import { UsersRepository } from '@repositories/users/UsersRepository'
 
 export const getUsersAsync = createAsyncThunk<User[], UsersRepository>(
   'users/load',
