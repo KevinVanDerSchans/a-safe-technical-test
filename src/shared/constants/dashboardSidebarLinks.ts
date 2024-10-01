@@ -11,7 +11,7 @@ export const DASHBOARD_NAVIGATION_LINKS = (): InternalLink[] => [
     testId: 'link-go-to-dashboard',
   },
   {
-    url: '/users',
+    url: '/dashboard/users',
     label: 'Users',
     ariaLabel: 'Go to Users page',
     icon: ICONS.FaUsers,
