@@ -4,6 +4,7 @@ import { GetServerSideProps } from 'next'
 import { useSession } from 'next-auth/react'
 import { checkDashboardPageSession } from '@app/services/auth/checkDashboardPageSession'
 import DashboardLayout from '@layouts/DashboardLayout'
+import WebExtensionChart from '@features/charts/WebExtensionChart/WebExtensionChart'
 
 export default function StatisticsPage() {
   const { data: session } = useSession()
@@ -20,7 +21,9 @@ export default function StatisticsPage() {
       <main className='flex items-center justify-center'>
         {session ? (
           <DashboardLayout>
-            <span>Statistics</span>
+            <div>
+              <WebExtensionChart />
+            </div>
           </DashboardLayout>
         ) : (
           <span>You have to be logged!</span>
