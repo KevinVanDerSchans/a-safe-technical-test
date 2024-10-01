@@ -5,6 +5,8 @@ import { RiAdminLine as LoginIcon, RiUserHeartLine as LoggedIcon } from 'react-i
 import { VscDashboard } from 'react-icons/vsc'
 import { IoMdLogOut } from 'react-icons/io'
 import { FaUsers } from 'react-icons/fa6'
+import { HiMenu, HiX } from 'react-icons/hi'
+import { MdOutlineDataThresholding } from 'react-icons/md'
 
 const ICONS = {
   HomeIcon,
@@ -18,6 +20,9 @@ const ICONS = {
   EmailIcon,
   PasswordIcon,
   FaUsers,
+  HiMenu,
+  HiX,
+  MdOutlineDataThresholding,
 }
 
 export default ICONS
