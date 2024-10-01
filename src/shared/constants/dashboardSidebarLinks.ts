@@ -4,11 +4,11 @@ import { InternalLink } from '@sharedTypes/InternalLink'
 
 export const DASHBOARD_NAVIGATION_LINKS = (): InternalLink[] => [
   {
-    url: '/dashboard',
+    url: '/dashboard/statistics',
     label: 'Statistics',
-    ariaLabel: 'Go to Dashboard page',
+    ariaLabel: 'Go to Statistics page',
     icon: ICONS.MdOutlineDataThresholding,
-    testId: 'link-go-to-dashboard',
+    testId: 'link-go-to-statistics',
   },
   {
     url: '/dashboard/users',

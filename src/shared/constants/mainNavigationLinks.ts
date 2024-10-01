@@ -6,7 +6,7 @@ export const MAIN_NAVIGATION_LINKS = (session: any): InternalLink[] => {
   if (session) {
     return [
       {
-        url: '/dashboard',
+        url: '/dashboard/statistics',
         label: 'Dashboard',
         ariaLabel: 'Go to Dashboard page',
         icon: ICONS.VscDashboard,
