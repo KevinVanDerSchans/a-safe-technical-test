@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 import { useSession } from 'next-auth/react'
 import { checkDashboardPageSession } from '@app/services/auth/checkDashboardPageSession'
+import DashboardLayout from '@layouts/DashboardLayout'
 
 export default function DashboardPage() {
   const { data: session } = useSession()
@@ -16,9 +17,16 @@ export default function DashboardPage() {
           content='Built with React, NextJS, TypeScript and Redux'
         />
       </Head>
-      <main className='flex items-center justify-center h-screen'>
-        {session ? <span>Dashboard</span> : <span>You have to be logged!</span>}
-      </main>
+
+      {session ? (
+        <DashboardLayout>
+          <div></div>
+        </DashboardLayout>
+      ) : (
+        <main className='flex items-center justify-center'>
+          <span>You have to be logged!</span>
+        </main>
+      )}
     </>
   )
 }
