@@ -21,8 +21,6 @@ export default function CustomersPage() {
       <main className='flex items-center justify-center'>
         {session ? (
           <DashboardLayout>
-            <h2>Customers</h2>
-
             <CustomersList />
           </DashboardLayout>
         ) : (
