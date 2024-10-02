@@ -7,6 +7,9 @@ const themeConfig = {
     accent: '#0284c7', // Para resaltar
     accentLight: '#5ec6ff', // Para resaltar - claro
     muted: '#c5c5c54d', // Textos secundarios
+    error: '#e53e3e',
+    errorLight: '#fff5f5',
+    errorText: '#c53030',
   },
   dark: {
     background: '#1f2937',
@@ -16,6 +19,9 @@ const themeConfig = {
     accent: '#4f46e5',
     accentLight: '#4f46e5',
     muted: '#6b7280',
+    error: '#e53e3e',
+    errorLight: '#fff5f5',
+    errorText: '#c53030',
   },
   solarized: {
     background: '#f4ecd8',
@@ -25,6 +31,9 @@ const themeConfig = {
     accent: '#e07a5f',
     accentLight: '#f2b8a6',
     muted: '#cfc1b0',
+    error: '#e53e3e',
+    errorLight: '#fff5f5',
+    errorText: '#c53030',
   },
 }
 
