@@ -12,9 +12,12 @@ export function useCustomers() {
   const { customers, status } = useSelector((state: RootState) => state.customers)
   const dispatch = useDispatch<AppDispatch>()
 
-  const loadCustomers = useCallback(async () => {
-    await dispatch(getCustomersAsync(repo))
-  }, [repo, dispatch])
+  const loadCustomers = useCallback(
+    async (page = 1, resultsPerPage = 10) => {
+      await dispatch(getCustomersAsync({ repo, page, resultsPerPage }))
+    },
+    [repo, dispatch]
+  )
 
   return {
     loadCustomers,
