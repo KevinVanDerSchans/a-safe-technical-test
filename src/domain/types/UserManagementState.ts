@@ -1,11 +1,11 @@
 import { User } from '@entities/User'
-import { UsersFetchStatus } from '@mainTypes/UsersFetchStatus'
+import { RequestStatus } from '@sharedTypes/RequestStatus'
 
 export type UserManagementState = {
   currentUser: User | null
   token: string | null
   users: User[]
-  status: UsersFetchStatus
+  status: RequestStatus
   hasLoginError: boolean
   loginErrorMessage: string | null
 }
@@ -14,7 +14,7 @@ export const initialUsersManagementState: UserManagementState = {
   currentUser: null,
   token: null,
   users: [],
-  status: UsersFetchStatus.Idle,
+  status: RequestStatus.Idle,
   hasLoginError: false,
   loginErrorMessage: null,
 }

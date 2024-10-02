@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import { getCustomersAsync } from '@redux/slices/customers/customersThunks'
 
 import { Customer } from '@entities/Customer'
-import { CustomersFetchStatus } from '@mainTypes/CustomersFetchStatus'
+import { RequestStatus } from '@sharedTypes/RequestStatus'
 import { initialCustomersManagementState } from '@mainTypes/CustomersManagementState'
 
 const customersSlice = createSlice({
@@ -11,14 +11,14 @@ const customersSlice = createSlice({
   reducers: {},
   extraReducers: builder => {
     builder.addCase(getCustomersAsync.fulfilled, (state, { payload }: { payload: Customer[] }) => {
-      state.status = CustomersFetchStatus.Loaded
+      state.status = RequestStatus.Loaded
       state.customers = payload
     })
     builder.addCase(getCustomersAsync.pending, state => {
-      state.status = CustomersFetchStatus.Idle
+      state.status = RequestStatus.Idle
     })
     builder.addCase(getCustomersAsync.rejected, state => {
-      state.status = CustomersFetchStatus.Error
+      state.status = RequestStatus.Error
     })
   },
 })
