@@ -6,7 +6,7 @@ import SubmitButton from '@features/auth/LoginForm/SubmitButton'
 import ForgotCredentials from '@features/auth/LoginForm/ForgotCredentials'
 
 const LoginForm = () => {
-  const { email, setEmail, password, setPassword, handleSubmit } = useLoginForm()
+  const { email, setEmail, password, setPassword, isSubmitting, handleSubmit } = useLoginForm()
 
   return (
     <main className='absolute inset-0 flex flex-col items-center justify-center'>
@@ -23,7 +23,10 @@ const LoginForm = () => {
           password={password}
           setPassword={setPassword}
         />
-        <SubmitButton label='Sign in' />
+        <SubmitButton
+          label='Sign in'
+          isSubmitting={isSubmitting}
+        />
       </form>
 
       <ForgotCredentials />
