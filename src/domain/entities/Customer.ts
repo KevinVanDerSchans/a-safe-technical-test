@@ -1,4 +1,4 @@
-export interface Customer {
+export type Customer = Readonly<{
   gender: string
   name: {
     first: string
@@ -17,4 +17,4 @@ export interface Customer {
     uuid: string
     username: string
   }
-}
+}>
