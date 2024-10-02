@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { ThemeRepository } from '@repositories/theme/ThemeRepository'
+import { ThemeRepository } from '@repositories/themes/ThemeRepository'
 
 export const useTheme = () => {
   const [theme, setTheme] = useState<string>('light')
