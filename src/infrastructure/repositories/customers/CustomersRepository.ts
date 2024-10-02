@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-unused-vars */
 import { Customer } from '@entities/Customer'
-import { CustomersAPIResponse } from '@interfaces/CustomersAPIResponse'
 
 export class CustomersRepository implements Repository<Customer> {
   constructor(public url: string) {
@@ -15,8 +15,14 @@ export class CustomersRepository implements Repository<Customer> {
       throw new Error(message)
     }
 
-    const data = (await response.json()) as CustomersAPIResponse
-    return data.results
+    const data = await response.json()
+
+    const sanitizedResults = data.results.map((customer: any) => {
+      delete customer.login
+      return customer
+    })
+
+    return sanitizedResults
   }
 }
 

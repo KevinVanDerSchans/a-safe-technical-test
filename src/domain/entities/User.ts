@@ -1,19 +1,19 @@
 export interface UserAddress {
-  readonly city: string
-  readonly zipcode: string
+  city: string
+  zipcode: string
 }
 
 export interface UserCompany {
-  readonly name: string
+  name: string
 }
 
-export interface User {
-  readonly id: number
-  readonly name: string
-  readonly username: string
-  readonly email: string
-  readonly address: UserAddress
-  readonly company: UserCompany
-  readonly phone: string
-  readonly website: string
-}
+export type User = Readonly<{
+  id: number
+  name: string
+  username: string
+  email: string
+  address: UserAddress
+  company: UserCompany
+  phone: string
+  website: string
+}>
