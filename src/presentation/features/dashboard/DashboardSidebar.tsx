@@ -13,7 +13,7 @@ const DashboardSidebar = () => {
           <h1 className='text-lg font-bold'>DASHBOARD</h1>
 
           <button onClick={toggleSidebar}>
-            {isSidebarOpen ? <ICONS.HiX size={28} /> : <ICONS.HiMenu size={28} />}
+            {isSidebarOpen ? <ICONS.CrossCloseMenu size={28} /> : <ICONS.MobileHamburgerMenu size={28} />}
           </button>
         </div>
       </section>
