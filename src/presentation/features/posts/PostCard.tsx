@@ -20,6 +20,7 @@ export function PostCard({ item, userName }: PropsType) {
         <Image
           width={50}
           height={50}
+          loading='lazy'
           src={`${NEXT_PUBLIC_AVATARS_URL}/${userName}`}
           alt={`${userName} profile picture`}
           className='h-10 w-10 rounded-full border-2 border-[var(--secondary)] bg-[var(--primary)]'
