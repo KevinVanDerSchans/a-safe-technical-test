@@ -7,6 +7,7 @@ import { IoMdLogOut } from 'react-icons/io'
 import { FaUsers } from 'react-icons/fa6'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { MdOutlineDataThresholding } from 'react-icons/md'
+import { FiUsers } from 'react-icons/fi'
 
 const ICONS = {
   HomeIcon,
@@ -23,6 +24,7 @@ const ICONS = {
   HiMenu,
   HiX,
   MdOutlineDataThresholding,
+  FiUsers,
 }
 
 export default ICONS

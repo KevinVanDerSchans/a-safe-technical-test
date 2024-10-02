@@ -11,10 +11,17 @@ export const DASHBOARD_NAVIGATION_LINKS = (): InternalLink[] => [
     testId: 'link-go-to-statistics',
   },
   {
+    url: '/dashboard/customers',
+    label: 'Customers',
+    ariaLabel: 'Go to Customers page',
+    icon: ICONS.FaUsers,
+    testId: 'link-go-to-customers',
+  },
+  {
     url: '/dashboard/users',
     label: 'Users',
     ariaLabel: 'Go to Users page',
-    icon: ICONS.FaUsers,
+    icon: ICONS.FiUsers,
     testId: 'link-go-to-users',
   },
   {
