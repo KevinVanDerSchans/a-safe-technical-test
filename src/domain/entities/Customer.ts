@@ -13,4 +13,8 @@ export interface Customer {
   picture: {
     large: string
   }
+  login?: {
+    uuid: string
+    username: string
+  }
 }
