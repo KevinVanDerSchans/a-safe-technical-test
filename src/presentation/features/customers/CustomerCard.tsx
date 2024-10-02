@@ -16,6 +16,7 @@ export function CustomerCard({ item }: PropsType) {
       <Image
         width={80}
         height={80}
+        loading='lazy'
         src={picture.large}
         alt={`${name.first} ${name.last} profile picture`}
         className='rounded-full object-cover'

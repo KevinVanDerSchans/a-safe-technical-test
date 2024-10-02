@@ -17,6 +17,7 @@ export function UserCard({ item }: PropsType) {
       <Image
         width={150}
         height={150}
+        loading='lazy'
         src={`${NEXT_PUBLIC_AVATARS_URL}/${username}`}
         alt={`${username} profile picture`}
         className='md:mr-8 object-cover'

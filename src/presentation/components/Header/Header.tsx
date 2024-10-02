@@ -17,6 +17,7 @@ const Header = () => {
           <figure className='flex items-center primary-hover-color-transition gap-x-4 hover:brightness-75'>
             <Image
               src={SVGS.LOGO}
+              loading='lazy'
               alt='A-SAFE company logo'
               className='w-16 h-16'
             />
