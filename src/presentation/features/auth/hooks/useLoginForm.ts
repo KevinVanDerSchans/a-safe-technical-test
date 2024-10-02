@@ -19,6 +19,8 @@ const useLoginForm = () => {
       showLoginSuccessAlert()
       router.push('/')
     } else {
+      setEmail('')
+      setPassword('')
       showLoginErrorAlert()
     }
   }
