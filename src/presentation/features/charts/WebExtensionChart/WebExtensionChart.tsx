@@ -1,20 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Bar } from 'react-chartjs-2'
 
-import { useFetchUsers } from '@features/users/hooks/useFetchUsers'
-import { getWebExtensionChartData } from '@features/charts/WebExtensionChart/webExtensionChartConfig'
+import { useWebExtensionChart } from '@features/charts/hooks/useWebExtensionChart'
 import { MainSpinner } from '@sharedComponents/MainSpinner'
 import ErrorFeedback from '@sharedComponents/ErrorFeedback'
 import { RequestStatus } from '@sharedTypes/RequestStatus'
 
 const WebExtensionChart: React.FC = () => {
-  const { loadUsers, users, status } = useFetchUsers()
-
-  useEffect(() => {
-    loadUsers()
-  }, [loadUsers])
-
-  const chartData = React.useMemo(() => getWebExtensionChartData(users), [users])
+  const { loadUsers, chartData, status } = useWebExtensionChart()
 
   return (
     <div className='flex items-center justify-center min-h-screen'>
