@@ -9,7 +9,7 @@ const DashboardSidebar = () => {
   return (
     <>
       <section className='pt-16'>
-        <div className='bg-[var(--foreground)] text-[var(--secondary)] md:hidden flex justify-between items-center p-4'>
+        <div className='bg-[var(--accentLight)] text-[var(--secondary)] md:hidden flex justify-between items-center p-4'>
           <h1 className='text-lg font-bold'>DASHBOARD</h1>
 
           <button onClick={toggleSidebar}>
@@ -19,7 +19,7 @@ const DashboardSidebar = () => {
       </section>
 
       <aside
-        className={`w-56 bg-[var(--foreground)] text-[var(--secondary)] flex flex-col p-4 py-24 absolute md:relative transform transition-transform duration-300 md:translate-x-0 ${
+        className={`w-56 bg-[var(--accentLight)] text-[var(--secondary)] flex flex-col p-4 py-24 absolute md:relative transform transition-transform duration-300 md:translate-x-0 ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } md:w-56 h-screen md:flex-shrink-0`}
       >

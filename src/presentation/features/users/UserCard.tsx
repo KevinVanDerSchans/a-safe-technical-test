@@ -28,34 +28,34 @@ export function UserCard({ item }: PropsType) {
 
         <ul className='flex flex-col gap-y-2'>
           <li className=''>
-            <span className='text-xs'>FULL NAME: </span>
+            <span className='text-xs text-[var(--accentLight)]'>FULL NAME: </span>
             <span className='text-[var(--primary)]'>{name}</span>
           </li>
 
           <li className='text-sm'>
-            <span className='text-xs'>CITY: </span>
+            <span className='text-xs text-[var(--accentLight)]'>CITY: </span>
             <span className='text-[var(--primary)]'>
               {address.city} ({address.zipcode})
             </span>
           </li>
 
           <li className='text-sm'>
-            <span className='text-xs'>COMPANY: </span>
+            <span className='text-xs text-[var(--accentLight)]'>COMPANY: </span>
             <span className='text-[var(--primary)]'>{company.name}</span>
           </li>
 
           <li className='text-sm'>
-            <span className='text-xs'>WEBSITE: </span>
+            <span className='text-xs text-[var(--accentLight)]'>WEBSITE: </span>
             <span className='text-[var(--primary)]'>{website}</span>
           </li>
 
           <li className='text-sm'>
-            <span className='text-xs'>PHONE: </span>
+            <span className='text-xs text-[var(--accentLight)]'>PHONE: </span>
             <span className='text-[var(--primary)]'>{phone}</span>
           </li>
 
           <li className='text-sm'>
-            <span className='text-xs'>EMAIL: </span>
+            <span className='text-xs text-[var(--accentLight)]'>EMAIL: </span>
             <span className='text-[var(--primary)]'>{email}</span>
           </li>
         </ul>

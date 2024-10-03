@@ -1,39 +1,39 @@
 const themeConfig = {
   light: {
-    background: '#fff', // Color de fondo oscuro
-    foreground: '#6b7270', // Color de texto claro
-    primary: '#000', // Elementos principales
-    secondary: '#fff', // Elementos secundarios
-    accent: '#0284c7', // Para resaltar
-    accentLight: '#5ec6ff', // Para resaltar - claro
-    muted: '#c5c5c54d', // Textos secundarios
+    background: '#f5f5f5',
+    foreground: '#4a5568',
+    primary: '#2d3748',
+    secondary: '#e2e8f0',
+    accent: '#3182ce',
+    accentLight: '#63b3ed',
+    muted: '#e2e8f0',
     error: '#e53e3e',
-    errorLight: '#fff5f5',
-    errorText: '#c53030',
+    errorLight: '#fed7d7',
+    errorText: '#9b2c2c',
   },
   dark: {
-    background: '#1f2937',
-    foreground: '#000',
-    primary: '#9ca3af',
-    secondary: '#374151',
-    accent: '#4f46e5',
-    accentLight: '#4f46e5',
-    muted: '#6b7280',
-    error: '#e53e3e',
-    errorLight: '#fff5f5',
+    background: '#121212',
+    foreground: '#e2e8f0',
+    primary: '#a0aec0',
+    secondary: '#2d3748',
+    accent: '#7f9cf5',
+    accentLight: '#a3bffa',
+    muted: '#4a5568',
+    error: '#f56565',
+    errorLight: '#feb2b2',
     errorText: '#c53030',
   },
   solarized: {
-    background: '#f4ecd8',
-    foreground: '#000',
+    background: '#fdf6e3',
+    foreground: '#586e75',
     primary: '#d49a6a',
-    secondary: '#fff',
-    accent: '#e07a5f',
-    accentLight: '#f2b8a6',
-    muted: '#cfc1b0',
-    error: '#e53e3e',
-    errorLight: '#fff5f5',
-    errorText: '#c53030',
+    secondary: '#eee8d5',
+    accent: '#268bd2',
+    accentLight: '#93a1a1',
+    muted: '#839496',
+    error: '#dc322f',
+    errorLight: '#ffb4b4',
+    errorText: '#d73232',
   },
 }
 
