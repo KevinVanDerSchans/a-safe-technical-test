@@ -25,8 +25,8 @@ export function PostCard({ item, userName }: PropsType) {
           alt={`${userName} profile picture`}
           className='h-10 w-10 rounded-full border-2 border-[var(--secondary)] bg-[var(--primary)]'
         />
-        <p className='text-xs font-semibold italic text-[var(--primary)] px-4'>
-          posted by <span className='font-bold text-sm'>@{userName}</span>
+        <p className='text-xs font-semibold italic text-[var(--secondary)] px-4'>
+          posted by <span className='font-bold text-sm text-[var(--secondary)]'>@{userName}</span>
         </p>
       </div>
 
@@ -36,7 +36,7 @@ export function PostCard({ item, userName }: PropsType) {
 
       <div className='w-10 bg-[var(--primary)] h-[1px] my-4'></div>
 
-      <p className='text-xs leading-5 line-clamp-4 my-4'>{body.toUpperCase()}</p>
+      <p className='text-xs leading-5 line-clamp-4 my-4 text-[var(--secondary)]'>{body.toUpperCase()}</p>
     </li>
   )
 }
