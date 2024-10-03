@@ -14,7 +14,7 @@ export function PostCard({ item, userName }: PropsType) {
   return (
     <li
       data-testid='post-card'
-      className='relative p-8 min-h-[20rem] border-2 text-[var(--primary)] bg-[var(--accentLight)] rounded-xl flex flex-col items-center primary-hover-card-transition'
+      className='relative p-8 min-h-[20rem] border-2 text-[var(--primary)] bg-[var(--accent)] rounded-xl flex flex-col items-center primary-hover-card-transition'
     >
       <div className='w-full border-b border-[var(--primary)] pb-4 flex items-center relative'>
         <Image

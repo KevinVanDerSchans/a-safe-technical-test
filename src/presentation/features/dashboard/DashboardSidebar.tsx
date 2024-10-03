@@ -24,7 +24,7 @@ const DashboardSidebar = () => {
         } md:w-56 h-screen md:flex-shrink-0`}
       >
         <div className='mb-4 hidden md:block'>
-          <h1 className='text-lg font-bold text-center'>DASHBOARD</h1>
+          <h1 className='text-lg font-bold text-center text-[var(--secondary)]'>DASHBOARD</h1>
 
           <div className='flex justify-center'>
             <div className='w-10 bg-[var(--secondary)] h-[1px] my-4'></div>

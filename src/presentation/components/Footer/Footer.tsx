@@ -30,9 +30,13 @@ const Footer = () => {
 
         <section
           role='region'
+          aria-labelledby='footer-contact'
           className='flex items-center'
         >
-          <address className='flex-col items-center text-sm not-italic leading-none text-right text-[var(--secondary)]'>
+          <address
+            id='footer-contact'
+            className='flex-col items-center text-sm not-italic leading-none text-right text-[var(--secondary)]'
+          >
             KEVIN SCHANS © <span className='text-xs'>2024</span>
           </address>
         </section>

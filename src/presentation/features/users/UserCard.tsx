@@ -12,7 +12,7 @@ export function UserCard({ item }: PropsType) {
   return (
     <li
       data-testid='user-card'
-      className='border-b-2 border-[var(--accent)] py-4 pb-4 px-4 flex flex-col md:flex-row md:items-center md:gap-4'
+      className='border-b-2 border-[var(--accent)] pb-4 px-4 flex flex-col md:flex-row md:items-center md:gap-4 md:pt-14'
     >
       <Image
         width={150}
@@ -28,34 +28,34 @@ export function UserCard({ item }: PropsType) {
 
         <ul className='flex flex-col gap-y-2'>
           <li className=''>
-            <span className='text-xs text-[var(--accentLight)]'>FULL NAME: </span>
+            <span className='text-xs font-semibold text-[var(--accent)]'>FULL NAME: </span>
             <span className='text-[var(--primary)]'>{name}</span>
           </li>
 
           <li className='text-sm'>
-            <span className='text-xs text-[var(--accentLight)]'>CITY: </span>
+            <span className='text-xs font-semibold text-[var(--accent)]'>CITY: </span>
             <span className='text-[var(--primary)]'>
               {address.city} ({address.zipcode})
             </span>
           </li>
 
           <li className='text-sm'>
-            <span className='text-xs text-[var(--accentLight)]'>COMPANY: </span>
+            <span className='text-xs font-semibold text-[var(--accent)]'>COMPANY: </span>
             <span className='text-[var(--primary)]'>{company.name}</span>
           </li>
 
           <li className='text-sm'>
-            <span className='text-xs text-[var(--accentLight)]'>WEBSITE: </span>
+            <span className='text-xs font-semibold text-[var(--accent)]'>WEBSITE: </span>
             <span className='text-[var(--primary)]'>{website}</span>
           </li>
 
           <li className='text-sm'>
-            <span className='text-xs text-[var(--accentLight)]'>PHONE: </span>
+            <span className='text-xs font-semibold text-[var(--accent)]'>PHONE: </span>
             <span className='text-[var(--primary)]'>{phone}</span>
           </li>
 
           <li className='text-sm'>
-            <span className='text-xs text-[var(--accentLight)]'>EMAIL: </span>
+            <span className='text-xs font-semibold text-[var(--accent)]'>EMAIL: </span>
             <span className='text-[var(--primary)]'>{email}</span>
           </li>
         </ul>

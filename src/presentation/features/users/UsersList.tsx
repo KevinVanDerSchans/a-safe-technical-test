@@ -33,7 +33,7 @@ export default function UsersList() {
       {status === RequestStatus.Loaded && (
         <ul
           role='list'
-          className='list-none flex flex-col flex-grow items-center justify-center w-full py-20'
+          className='list-none flex flex-col flex-grow items-center justify-center w-full xs:py-0'
         >
           {users.map(item => (
             <UserCard
