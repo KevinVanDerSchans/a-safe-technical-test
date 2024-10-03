@@ -9,7 +9,7 @@ const ForgotCredentials = () => {
         href={'mailto:kevinvdsd@hotmail.com'}
         role='link'
         aria-label='Reach out to management for assistance'
-        className='underline text-tertiary text-[var(--accent)]'
+        className='underline text-tertiary focus:text-[var(--primary)] text-[var(--accent)]'
       >
         Please reach out to management for assistance
       </Link>

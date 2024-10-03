@@ -9,7 +9,7 @@ const SubmitButton = ({ label, isSubmitting }: SubmitButtonProps) => (
     role='button'
     aria-label={label}
     disabled={isSubmitting}
-    className='w-full py-2 mt-4 text-sm uppercase cursor-pointer focus:bg-[var(--primary)] primary-hover-button-transition'
+    className='w-full py-2 mt-4 text-sm uppercase cursor-pointer hover:font-bold focus:bg-[var(--primary)] primary-hover-button-transition'
   >
     <span>{isSubmitting ? <span>Loading...</span> : label}</span>
   </button>

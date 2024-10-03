@@ -15,7 +15,7 @@ export default function CustomersList() {
   }, [loadCustomers])
 
   return (
-    <main className='flex-grow flex flex-col'>
+    <main className='flex-grow flex flex-col pt-8'>
       {status === RequestStatus.Error && (
         <main className='flex items-center justify-center min-h-screen'>
           <ErrorFeedback

@@ -5,7 +5,7 @@ const themeConfig = {
     primary: '#000', // Elementos principales
     secondary: '#fff', // Elementos secundarios
     accent: '#0284c7', // Para resaltar
-    accentLight: '#5ec6ff', // Para resaltar - claro
+    accentLight: '#4A90E2', // Para resaltar - claro
     muted: '#c5c5c54d', // Textos secundarios
     error: '#e53e3e',
     errorLight: '#fff5f5',

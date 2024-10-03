@@ -10,9 +10,9 @@ const WebExtensionChart: React.FC = () => {
   const { loadUsers, chartData, status } = useWebExtensionChart()
 
   return (
-    <div className='flex items-center justify-center min-h-screen'>
+    <div className='flex items-center justify-center lg:mt-40 sm:mt-40'>
       {status === RequestStatus.Error && (
-        <main className='flex items-center justify-center min-h-screen'>
+        <main className='flex items-center justify-center'>
           <ErrorFeedback
             message='Posts are not available at this time.'
             onRetry={loadUsers}
@@ -21,13 +21,13 @@ const WebExtensionChart: React.FC = () => {
       )}
 
       {status === RequestStatus.Idle && (
-        <main className='flex items-center justify-center min-h-screen'>
+        <main className='flex items-center justify-center'>
           <MainSpinner />
         </main>
       )}
 
       {status === RequestStatus.Loaded && (
-        <div className='w-full max-w-4xl flex items-center justify-center h-screen '>
+        <div className='w-full max-w-4xl flex items-center justify-center'>
           <div className='h-auto md:w-2/3 md:h-96 mx-auto'>
             <Bar data={chartData} />
           </div>

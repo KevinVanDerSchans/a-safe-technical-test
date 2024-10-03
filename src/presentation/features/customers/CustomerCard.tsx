@@ -30,7 +30,7 @@ export function CustomerCard({ item }: PropsType) {
           {location.city}, {location.country}
         </p>
         <p className='text-sm'>{phone}</p>
-        <p className='text-sm'>{email}</p>
+        <p className='text-xs'>{email}</p>
       </section>
     </li>
   )
