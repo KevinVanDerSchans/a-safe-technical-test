@@ -1,20 +1,19 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { createAsyncThunk } from '@reduxjs/toolkit'
+import { errorService } from '@app/services/errors/ErrorService'
+import CustomersErrors from '@customErrors/CustomersErrors'
 
 export const getCustomersAsync = createAsyncThunk<any[], { repoUrl: string; page: number; resultsPerPage: number }>(
   'customers/load',
-  async ({ repoUrl, page, resultsPerPage }, { rejectWithValue }) => {
+  async ({ repoUrl, page, resultsPerPage }) => {
     try {
       const response = await fetch(`${repoUrl}?page=${page}&results=${resultsPerPage}`)
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch customers')
-      }
-
       const data = await response.json()
       return data.results
     } catch (error) {
-      return rejectWithValue((error as Error).message)
+      errorService.handleError(new CustomersErrors.CustomersErrorFetching())
+      throw error
     }
   }
 )

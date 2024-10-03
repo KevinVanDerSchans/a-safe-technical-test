@@ -7,8 +7,16 @@ class CustomersErrorNotFound extends CustomError {
   }
 }
 
+class CustomersErrorFetching extends CustomError {
+  constructor(message: string = 'Error when fetching Clients') {
+    super(message)
+    this.name = 'CustomersErrorFetching'
+  }
+}
+
 const CustomersErrors = {
   CustomersErrorNotFound,
+  CustomersErrorFetching,
 }
 
 export default CustomersErrors

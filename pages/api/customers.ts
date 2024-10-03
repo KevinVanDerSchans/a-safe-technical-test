@@ -4,18 +4,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { NEXT_PUBLIC_CUSTOMERS_API_URL } from '@config/env'
 import { errorService } from '@app/services/errors/ErrorService'
-import CustomersErrors from 'src/domain/errors/CustomersErrors'
+import CustomersErrors from '@customErrors/CustomersErrors'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { page = 1, resultsPerPage = 9, seed = 'default-seed' } = req.query
 
   try {
     const response = await fetch(`${NEXT_PUBLIC_CUSTOMERS_API_URL}?page=${page}&results=${resultsPerPage}&seed=${seed}`)
-
-    if (!response.ok) {
-      errorService.handleError(new CustomersErrors.CustomersErrorNotFound())
-    }
-
     const data = await response.json()
 
     const sanitizedResults = data.results.map((customer: any) => {
@@ -29,5 +24,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({ results: sanitizedResults })
   } catch (error) {
     errorService.handleError(new CustomersErrors.CustomersErrorNotFound())
+    throw error
   }
 }

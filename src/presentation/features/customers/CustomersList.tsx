@@ -15,7 +15,7 @@ export default function CustomersList() {
   }, [loadCustomers])
 
   return (
-    <main className='flex-grow flex flex-col pt-8'>
+    <main className='flex-grow flex flex-col'>
       {status === RequestStatus.Error && (
         <main className='flex items-center justify-center min-h-screen'>
           <ErrorFeedback
@@ -35,7 +35,7 @@ export default function CustomersList() {
         <>
           <ul
             role='list'
-            className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 list-none lg:p-8 xl:p-8'
+            className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 list-none lg:p-8 xl:p-8 pt-8'
           >
             {customers.map(item => (
               <CustomerCard

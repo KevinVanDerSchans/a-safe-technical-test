@@ -4,6 +4,7 @@ import { RootState, AppDispatch } from '@redux/store/store'
 import { getCustomersAsync } from '@redux/slices/customers/customersThunks'
 import { usePagination } from '@sharedHooks/usePagination'
 import { errorService } from '@app/services/errors/ErrorService'
+import CustomersErrors from '@customErrors/CustomersErrors'
 
 export function useFetchCustomers() {
   const repoUrl = useMemo(() => `/api/customers`, [])
@@ -17,7 +18,8 @@ export function useFetchCustomers() {
     try {
       await dispatch(getCustomersAsync({ repoUrl, page, resultsPerPage })).unwrap()
     } catch (error) {
-      errorService.handleError(error as Error)
+      errorService.handleError(new CustomersErrors.CustomersErrorFetching())
+      throw error
     }
   }, [repoUrl, page, resultsPerPage, dispatch])
 
