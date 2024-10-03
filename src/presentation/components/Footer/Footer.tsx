@@ -1,5 +1,6 @@
 import { FOOTER_LINKS } from '@constants/footerLinks'
 import FooterLink from '@components/Footer/FooterLink'
+import ThemeSelector from '@features/theme/ThemeSelector'
 
 const Footer = () => {
   const footerLinks = FOOTER_LINKS()
@@ -22,6 +23,10 @@ const Footer = () => {
             ))}
           </ul>
         </nav>
+
+        <div className='items-center justify-center flex pb-4 px-8'>
+          <ThemeSelector />
+        </div>
 
         <section
           role='region'

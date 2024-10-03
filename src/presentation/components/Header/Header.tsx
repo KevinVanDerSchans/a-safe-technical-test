@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import SVGS from '@constants/svgs'
-import ThemeSelector from '@features/theme/ThemeSelector'
 import MainNavigation from '@components/MainNavigation/MainNavigation'
 
 const Header = () => {
@@ -27,7 +26,6 @@ const Header = () => {
       </div>
 
       <nav className='flex gap-x-6'>
-        <ThemeSelector />
         <MainNavigation />
       </nav>
     </header>
