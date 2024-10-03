@@ -16,12 +16,10 @@
     "paths": {
       "@app/*": ["src/app/*"],
       "@pages/*": ["pages/*"],
-      "@mappers/*": ["src/application/mappers/*"],
-      "@services/*": ["src/application/services/*"],
+      "@services/*": ["src/app/services/*"],
       "@errors/*": ["src/app/services/errors/*"],
       "@customErrors/*": ["src/domain/errors/*"],
       "@entities/*": ["src/domain/entities/*"],
-      "@interfaces/*": ["src/domain/interfaces/*"],
       "@mainTypes/*": ["src/domain/types/*"],
       "@api/*": ["src/infrastructure/api/*"],
       "@config/*": ["src/infrastructure/config/*"],

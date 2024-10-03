@@ -11,13 +11,13 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'robohash.org',
+        hostname: 'randomuser.me',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'randomuser.me',
+        hostname: 'robohash.org',
         port: '',
         pathname: '/**',
       },
