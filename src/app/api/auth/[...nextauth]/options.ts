@@ -9,4 +9,9 @@ export const options: NextAuthOptions = {
   pages: {
     signIn: '/login',
   },
+  callbacks: {
+    async redirect({ baseUrl }) {
+      return baseUrl
+    },
+  },
 }

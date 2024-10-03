@@ -24,7 +24,7 @@ export const MAIN_NAVIGATION_LINKS = (session: any): InternalLink[] => {
 
   return [
     {
-      url: '/api/auth/signin',
+      url: '/login',
       label: 'Login',
       ariaLabel: 'Go to Login page',
       icon: ICONS.LoginIcon,
