@@ -19,6 +19,7 @@
       "@mappers/*": ["src/application/mappers/*"],
       "@services/*": ["src/application/services/*"],
       "@errors/*": ["src/app/services/errors/*"],
+      "@customErrors/*": ["src/domain/errors/*"],
       "@entities/*": ["src/domain/entities/*"],
       "@interfaces/*": ["src/domain/interfaces/*"],
       "@mainTypes/*": ["src/domain/types/*"],
