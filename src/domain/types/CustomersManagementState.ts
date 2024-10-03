@@ -6,6 +6,7 @@ export type CustomerManagementState = {
   status: RequestStatus
   hasFetchError: boolean
   fetchErrorMessage: string | null
+  error: string | null
 }
 
 export const initialCustomersManagementState: CustomerManagementState = {
@@ -13,4 +14,5 @@ export const initialCustomersManagementState: CustomerManagementState = {
   status: RequestStatus.Idle,
   hasFetchError: false,
   fetchErrorMessage: null,
+  error: null,
 }

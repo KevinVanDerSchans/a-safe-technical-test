@@ -4,6 +4,8 @@ import { useCustomers } from '@features/customers/hooks/useCustomers'
 import { CustomerCard } from '@features/customers/CustomerCard'
 import { MainSpinner } from '@sharedComponents/MainSpinner'
 import { PaginationButton } from '@sharedComponents/PaginationButton'
+import ErrorFeedback from '@sharedComponents/ErrorFeedback'
+import { RequestStatus } from '@sharedTypes/RequestStatus'
 
 export default function CustomersList() {
   const { loadCustomers, customers, status, page, handleNextPage, handlePrevPage } = useCustomers()
@@ -14,13 +16,22 @@ export default function CustomersList() {
 
   return (
     <main className='flex-grow flex flex-col pt-8'>
-      {status === 'idle' && (
+      {status === RequestStatus.Error && (
+        <main className='flex items-center justify-center min-h-screen'>
+          <ErrorFeedback
+            message='Customers are not available at this time.'
+            onRetry={loadCustomers}
+          />
+        </main>
+      )}
+
+      {status === RequestStatus.Idle && (
         <div className='h-screen flex items-center justify-center flex-grow'>
           <MainSpinner />
         </div>
       )}
 
-      {status === 'loaded' && (
+      {status === RequestStatus.Loaded && (
         <>
           <ul
             role='list'

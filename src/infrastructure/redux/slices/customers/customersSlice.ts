@@ -13,12 +13,15 @@ const customersSlice = createSlice({
     builder.addCase(getCustomersAsync.fulfilled, (state, { payload }: { payload: Customer[] }) => {
       state.status = RequestStatus.Loaded
       state.customers = payload
+      state.error = null
     })
     builder.addCase(getCustomersAsync.pending, state => {
       state.status = RequestStatus.Idle
+      state.error = null
     })
-    builder.addCase(getCustomersAsync.rejected, state => {
+    builder.addCase(getCustomersAsync.rejected, (state, action) => {
       state.status = RequestStatus.Error
+      state.error = action.error.message || 'Error loading Customers'
     })
   },
 })
