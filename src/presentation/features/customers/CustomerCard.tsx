@@ -11,16 +11,18 @@ export function CustomerCard({ item }: PropsType) {
   return (
     <li
       data-testid='user-card'
-      className='bg-[var(--secondary)] rounded-lg shadow-lg p-6 flex flex-col sm:items-center sm:text-center md:flex-row md:items-start gap-4 hover:shadow-xl transition-shadow duration-200 ease-in-out'
+      className='bg-[var(--secondary)] rounded-lg shadow-lg p-6 flex flex-col text-center sm:items-center sm:text-center md:flex-row md:items-start gap-4 hover:shadow-xl transition-shadow duration-200 ease-in-out'
     >
-      <Image
-        width={80}
-        height={80}
-        loading='lazy'
-        src={picture.large}
-        alt={`${name.first} ${name.last} profile picture`}
-        className='rounded-full object-cover'
-      />
+      <div className='text-center flex items-center justify-center'>
+        <Image
+          width={80}
+          height={80}
+          loading='lazy'
+          src={picture.large}
+          alt={`${name.first} ${name.last} profile picture`}
+          className='rounded-full object-cover '
+        />
+      </div>
 
       <section className='flex-1 sm:flex sm:flex-col sm:items-center sm:text-center'>
         <h3 className='text-lg font-semibold text-[var(--primary)]'>

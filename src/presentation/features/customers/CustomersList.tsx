@@ -15,14 +15,14 @@ export default function CustomersList() {
   }, [loadCustomers])
 
   return (
-    <main className='flex-grow flex flex-col pt-8'>
+    <main className='flex-grow flex flex-col pt-8 py-12'>
       {status === RequestStatus.Error && (
-        <main className='flex items-center justify-center min-h-screen'>
+        <div className='flex items-center justify-center min-h-screen'>
           <ErrorFeedback
             message='Customers are not available at this time.'
             onRetry={loadCustomers}
           />
-        </main>
+        </div>
       )}
 
       {status === RequestStatus.Idle && (
@@ -35,7 +35,7 @@ export default function CustomersList() {
         <>
           <ul
             role='list'
-            className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 list-none lg:p-8 xl:p-8 pt-8'
+            className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 list-none lg:py-6 md:py-6'
           >
             {customers.map(item => (
               <CustomerCard
@@ -45,14 +45,13 @@ export default function CustomersList() {
             ))}
           </ul>
 
-          <div className='flex justify-center space-x-4 mt-auto'>
+          <div className='flex justify-center space-x-4 py-6'>
             <PaginationButton
               onClick={handlePrevPage}
               direction='previous'
               disabled={page === 1}
               className='px-4 py-2 bg-[var(--primary)] text-[var(--secondary)] disabled:bg-[var(--muted)] hover:bg-[var(--accent)] rounded-3xl'
             />
-
             <PaginationButton
               onClick={handleNextPage}
               direction='next'
