@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { User } from '@entities/User'
+import { errorService } from '@app/services/errors/ErrorService'
+import UsersErrors from 'src/domain/errors/UsersErrors'
 
 export class UsersRepository implements Repository<User> {
   constructor(public url: string) {
@@ -10,8 +12,7 @@ export class UsersRepository implements Repository<User> {
     const response = await fetch(this.url)
 
     if (!response.ok) {
-      const message = `Error: ${response.status}. ${response.statusText}`
-      throw new Error(message)
+      errorService.handleError(new UsersErrors.UsersErrorNotFound())
     }
 
     const answer = (await response.json()) as User[]

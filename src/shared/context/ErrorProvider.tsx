@@ -1,6 +1,6 @@
 import { createContext, useContext, ReactElement, useCallback } from 'react'
 
-import { errorService } from '@errors/ErrorService'
+import { errorService } from '@app/services/errors/ErrorService'
 import { ErrorContextProps, ErrorProviderProps } from '@sharedTypes/ErrorTypes'
 
 const ErrorContext = createContext<ErrorContextProps | undefined>(undefined)
