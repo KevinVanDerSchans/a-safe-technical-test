@@ -6,6 +6,7 @@ import { PostsRepository } from '@repositories/posts/PostsRepository'
 import { AppDispatch, RootState } from '@redux/store/store'
 import { getPostsAsync } from '@redux/slices/posts/postsThunks'
 import { errorService } from '@app/services/errors/ErrorService'
+import PostsErrors from '@customErrors/PostsErrors'
 
 export function useFetchPosts() {
   const repo = useMemo(() => new PostsRepository(NEXT_PUBLIC_API_URL), [])
@@ -17,7 +18,8 @@ export function useFetchPosts() {
     try {
       await dispatch(getPostsAsync({ repo }))
     } catch (error) {
-      errorService.handleError(error as Error)
+      errorService.handleError(new PostsErrors.PostsErrorFetching())
+      throw error
     }
   }, [repo, dispatch])
 

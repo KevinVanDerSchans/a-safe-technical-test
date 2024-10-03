@@ -48,7 +48,7 @@ export default function PostsList() {
                 />
               ))
             ) : (
-              <li className='text-center'>There are no results that match your search.</li>
+              <p className='text-center'>There are no results that match your search.</p>
             )}
           </ul>
         </main>
