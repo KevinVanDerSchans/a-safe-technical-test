@@ -8,6 +8,7 @@ export type UserManagementState = {
   status: RequestStatus
   hasLoginError: boolean
   loginErrorMessage: string | null
+  error: string | null
 }
 
 export const initialUsersManagementState: UserManagementState = {
@@ -17,4 +18,5 @@ export const initialUsersManagementState: UserManagementState = {
   status: RequestStatus.Idle,
   hasLoginError: false,
   loginErrorMessage: null,
+  error: null,
 }
