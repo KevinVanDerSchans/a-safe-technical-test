@@ -1,16 +1,18 @@
 import { Customer } from '@entities/Customer'
-import { CustomersFetchStatus } from './CustomersFetchStatus'
+import { RequestStatus } from '@sharedTypes/RequestStatus'
 
 export type CustomerManagementState = {
   customers: Customer[]
-  status: CustomersFetchStatus
+  status: RequestStatus
   hasFetchError: boolean
   fetchErrorMessage: string | null
+  error: string | null
 }
 
 export const initialCustomersManagementState: CustomerManagementState = {
   customers: [],
-  status: CustomersFetchStatus.Idle,
+  status: RequestStatus.Idle,
   hasFetchError: false,
   fetchErrorMessage: null,
+  error: null,
 }

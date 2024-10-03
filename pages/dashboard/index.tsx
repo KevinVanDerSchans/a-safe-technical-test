@@ -1,5 +1,5 @@
 import React from 'react'
-import Head from 'next/head'
+import Seo from '@sharedComponents/Seo'
 import { GetServerSideProps } from 'next'
 import { useSession } from 'next-auth/react'
 import { checkDashboardPageSession } from '@app/services/auth/checkDashboardPageSession'
@@ -10,13 +10,10 @@ export default function DashboardPage() {
 
   return (
     <>
-      <Head>
-        <title>A-SAFE DIGITAL - Dashboard</title>
-        <meta
-          name='description'
-          content='Built with React, NextJS, TypeScript and Redux'
-        />
-      </Head>
+      <Seo
+        title='A-SAFE DIGITAL - Dashboard'
+        description='Access your A-SAFE DIGITAL dashboard to view personalized insights.'
+      />
 
       {session ? (
         <DashboardLayout>
@@ -24,7 +21,7 @@ export default function DashboardPage() {
         </DashboardLayout>
       ) : (
         <main className='flex items-center justify-center'>
-          <span>You have to be logged!</span>
+          <p>You have to be logged!</p>
         </main>
       )}
     </>

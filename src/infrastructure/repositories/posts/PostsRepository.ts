@@ -6,21 +6,22 @@ export class PostsRepository implements Repository<Post> {
     this.url += 'posts'
   }
 
-  async getAll(filter?: string): Promise<Post[]> {
-    let filteredUrl = this.url
+  async getAll(): Promise<Post[]> {
+    const url = this.url
 
-    if (filter) {
-      filteredUrl = this.url + `?userId=${filter}`
+    try {
+      const response = await fetch(url)
+
+      if (!response.ok) {
+        const message = `Error: ${response.status}. ${response.statusText}`
+        throw new Error(message)
+      }
+
+      const answer = (await response.json()) as Post[]
+      return answer
+    } catch (error) {
+      throw error
     }
-
-    const response = await fetch(filteredUrl)
-    if (!response.ok) {
-      const message = `Error: ${response.status}. ${response.statusText}`
-      throw new Error(message)
-    }
-
-    const answer = (await response.json()) as Post[]
-    return answer
   }
 }
 

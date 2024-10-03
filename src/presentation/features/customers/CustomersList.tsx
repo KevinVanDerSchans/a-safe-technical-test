@@ -1,30 +1,41 @@
 import React, { useEffect } from 'react'
 
-import { useCustomers } from '@features/customers/hooks/useCustomers'
+import { useFetchCustomers } from '@features/customers/hooks/useFetchCustomers'
 import { CustomerCard } from '@features/customers/CustomerCard'
 import { MainSpinner } from '@sharedComponents/MainSpinner'
 import { PaginationButton } from '@sharedComponents/PaginationButton'
+import ErrorFeedback from '@sharedComponents/ErrorFeedback'
+import { RequestStatus } from '@sharedTypes/RequestStatus'
 
 export default function CustomersList() {
-  const { loadCustomers, customers, status, page, handleNextPage, handlePrevPage } = useCustomers()
+  const { loadCustomers, customers, status, page, handleNextPage, handlePrevPage } = useFetchCustomers()
 
   useEffect(() => {
     loadCustomers()
   }, [loadCustomers])
 
   return (
-    <main className='flex-grow flex flex-col pt-8'>
-      {status === 'idle' && (
+    <main className='flex-grow flex flex-col'>
+      {status === RequestStatus.Error && (
+        <main className='flex items-center justify-center min-h-screen'>
+          <ErrorFeedback
+            message='Customers are not available at this time.'
+            onRetry={loadCustomers}
+          />
+        </main>
+      )}
+
+      {status === RequestStatus.Idle && (
         <div className='h-screen flex items-center justify-center flex-grow'>
           <MainSpinner />
         </div>
       )}
 
-      {status === 'loaded' && (
+      {status === RequestStatus.Loaded && (
         <>
           <ul
             role='list'
-            className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 list-none lg:p-8 xl:p-8'
+            className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 list-none lg:p-8 xl:p-8 pt-8'
           >
             {customers.map(item => (
               <CustomerCard

@@ -7,15 +7,19 @@ export class UsersRepository implements Repository<User> {
   }
 
   async getAll(): Promise<User[]> {
-    const response = await fetch(this.url)
+    try {
+      const response = await fetch(this.url)
 
-    if (!response.ok) {
-      const message = `Error: ${response.status}. ${response.statusText}`
-      throw new Error(message)
+      if (!response.ok) {
+        const message = `Error: ${response.status}. ${response.statusText}`
+        throw new Error(message)
+      }
+
+      const answer = (await response.json()) as User[]
+      return answer
+    } catch (error) {
+      throw error
     }
-
-    const answer = (await response.json()) as User[]
-    return answer
   }
 }
 

@@ -9,14 +9,14 @@ export const MAIN_NAVIGATION_LINKS = (session: any): InternalLink[] => {
         url: '/dashboard/statistics',
         label: 'Dashboard',
         ariaLabel: 'Go to Dashboard page',
-        icon: ICONS.VscDashboard,
+        icon: ICONS.DashboardIcon,
         testId: 'link-go-to-dashboard',
       },
       {
         url: '/api/auth/signout',
         label: 'Logout',
         ariaLabel: 'Logout',
-        icon: ICONS.IoMdLogOut,
+        icon: ICONS.LogoutIcon,
         testId: 'logout',
       },
     ]

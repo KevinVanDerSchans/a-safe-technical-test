@@ -8,21 +8,25 @@ export class CustomersRepository implements Repository<Customer> {
   }
 
   async getAll(page = 1, resultsPerPage = 9, seed = 'default-seed'): Promise<Customer[]> {
-    const response = await fetch(`${this.url}?page=${page}&results=${resultsPerPage}&seed=${seed}`)
+    try {
+      const response = await fetch(`${this.url}?page=${page}&results=${resultsPerPage}&seed=${seed}`)
 
-    if (!response.ok) {
-      const message = `Error: ${response.status}. ${response.statusText}`
-      throw new Error(message)
+      if (!response.ok) {
+        const message = `Error: ${response.status}. ${response.statusText}`
+        throw new Error(message)
+      }
+
+      const data = await response.json()
+
+      const sanitizedResults = data.results.map((customer: any) => {
+        delete customer.login
+        return customer
+      })
+
+      return sanitizedResults
+    } catch (error) {
+      throw error
     }
-
-    const data = await response.json()
-
-    const sanitizedResults = data.results.map((customer: any) => {
-      delete customer.login
-      return customer
-    })
-
-    return sanitizedResults
   }
 }
 
