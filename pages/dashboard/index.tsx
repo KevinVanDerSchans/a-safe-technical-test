@@ -21,7 +21,7 @@ export default function DashboardPage() {
         </DashboardLayout>
       ) : (
         <main className='flex items-center justify-center'>
-          <span>You have to be logged!</span>
+          <p>You have to be logged!</p>
         </main>
       )}
     </>

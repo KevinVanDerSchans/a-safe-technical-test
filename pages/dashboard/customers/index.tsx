@@ -21,7 +21,7 @@ export default function CustomersPage() {
             <CustomersList />
           </DashboardLayout>
         ) : (
-          <span>You have to be logged!</span>
+          <p>You have to be logged!</p>
         )}
       </main>
     </>
