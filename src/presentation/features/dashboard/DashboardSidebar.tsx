@@ -1,6 +1,6 @@
 import React from 'react'
 import ICONS from '@constants/icons'
-import useToggleSidebar from './useToggleSidebar'
+import useToggleSidebar from '@features/dashboard/hooks/useToggleSidebar'
 import DashboardNavigation from '@components/DashboardNavigation/DashboardNavigation'
 
 const DashboardSidebar = () => {
@@ -12,7 +12,11 @@ const DashboardSidebar = () => {
         <div className='bg-[var(--accentLight)] text-[var(--secondary)] md:hidden flex justify-between items-center p-4'>
           <h1 className='text-lg font-bold'>DASHBOARD</h1>
 
-          <button onClick={toggleSidebar}>
+          <button
+            onClick={toggleSidebar}
+            aria-label={isSidebarOpen ? 'Close sidebar' : 'Open sidebar'}
+            aria-expanded={isSidebarOpen}
+          >
             {isSidebarOpen ? <ICONS.CrossCloseMenu size={28} /> : <ICONS.MobileHamburgerMenu size={28} />}
           </button>
         </div>
@@ -31,7 +35,10 @@ const DashboardSidebar = () => {
           </div>
         </div>
 
-        <nav className='flex flex-col space-y-2'>
+        <nav
+          aria-label='Dashboard navigation'
+          className='flex flex-col space-y-2'
+        >
           <DashboardNavigation />
         </nav>
       </aside>

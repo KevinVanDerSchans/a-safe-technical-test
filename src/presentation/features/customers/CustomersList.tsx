@@ -15,7 +15,10 @@ export default function CustomersList() {
   }, [loadCustomers])
 
   return (
-    <main className='flex-grow flex flex-col pt-8 py-12'>
+    <div
+      aria-live='polite'
+      className='flex-grow flex flex-col pt-8 py-12'
+    >
       {status === RequestStatus.Error && (
         <div className='flex items-center justify-center min-h-screen'>
           <ErrorFeedback
@@ -26,8 +29,11 @@ export default function CustomersList() {
       )}
 
       {status === RequestStatus.Idle && (
-        <div className='h-screen flex items-center justify-center flex-grow'>
-          <MainSpinner />
+        <div
+          className='h-screen flex items-center justify-center flex-grow'
+          aria-busy='true'
+        >
+          <MainSpinner aria-label='Loading customers...' />
         </div>
       )}
 
@@ -50,16 +56,18 @@ export default function CustomersList() {
               onClick={handlePrevPage}
               direction='previous'
               disabled={page === 1}
+              aria-label='Previous page'
               className='px-4 py-2 bg-[var(--primary)] text-[var(--secondary)] disabled:bg-[var(--muted)] hover:bg-[var(--accent)] rounded-3xl'
             />
             <PaginationButton
               onClick={handleNextPage}
               direction='next'
+              aria-label='Next page'
               className='px-4 py-2 bg-[var(--primary)] text-[var(--secondary)] disabled:bg-[var(--muted)] hover:bg-[var(--accent)] rounded-3xl'
             />
           </div>
         </>
       )}
-    </main>
+    </div>
   )
 }

@@ -17,11 +17,16 @@ export default function DashboardPage() {
 
       {session ? (
         <DashboardLayout>
-          <div></div>
+          <main className='flex items-center justify-center min-h-screen px-4'>
+            <div className='flex flex-col items-center text-center pb-8'>
+              <h1 className='text-3xl md:text-5xl'>DASHBOARD</h1>
+              <h2 className='mt-4 text-lg md:text-xl'>Choose an option in the Dashboard navigation bar.</h2>
+            </div>
+          </main>
         </DashboardLayout>
       ) : (
-        <main className='flex items-center justify-center'>
-          <p>You have to be logged!</p>
+        <main className='flex items-center justify-center min-h-screen px-4'>
+          <p className='text-lg md:text-xl'>You have to be logged!</p>
         </main>
       )}
     </>

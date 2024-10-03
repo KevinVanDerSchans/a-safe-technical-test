@@ -17,7 +17,7 @@ class GetThemeError extends CustomError {
 class SaveThemeError extends CustomError {
   constructor(message: string = 'An error occurred while updating the theme') {
     super(message)
-    this.name = 'GetThemeError'
+    this.name = 'SaveThemeError'
   }
 }
 

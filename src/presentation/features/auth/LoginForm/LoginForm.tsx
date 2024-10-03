@@ -12,20 +12,23 @@ const LoginForm = () => {
     <main className='absolute inset-0 flex flex-col items-center justify-center'>
       <form
         onSubmit={handleSubmit}
-        role='form'
         className='p-12 bg-[var(--muted)] w-80'
       >
-        <EmailInput
-          email={email}
-          setEmail={setEmail}
-        />
-        <PasswordInput
-          password={password}
-          setPassword={setPassword}
-        />
+        <fieldset>
+          <legend className='sr-only'>Login Information</legend>
+          <EmailInput
+            email={email}
+            setEmail={setEmail}
+          />
+          <PasswordInput
+            password={password}
+            setPassword={setPassword}
+          />
+        </fieldset>
         <SubmitButton
           label='Sign in'
           isSubmitting={isSubmitting}
+          aria-busy={isSubmitting}
         />
       </form>
 

@@ -6,7 +6,9 @@ export function MainSpinner() {
       size={60}
       speedMultiplier={0.5}
       data-testid='spinner'
+      role='status'
       color='var(--primary)'
+      aria-label='Loading'
     />
   )
 }

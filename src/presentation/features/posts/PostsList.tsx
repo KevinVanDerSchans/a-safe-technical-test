@@ -19,22 +19,28 @@ export default function PostsList() {
   return (
     <>
       {status === RequestStatus.Error && (
-        <main className='flex items-center justify-center min-h-screen'>
+        <div
+          aria-live='polite'
+          className='flex items-center justify-center min-h-screen'
+        >
           <ErrorFeedback
             message='Posts are not available at this time.'
             onRetry={loadPosts}
           />
-        </main>
+        </div>
       )}
 
       {status === RequestStatus.Idle && (
-        <main className='flex items-center justify-center min-h-screen'>
+        <div
+          aria-busy='true'
+          className='flex items-center justify-center min-h-screen'
+        >
           <MainSpinner />
-        </main>
+        </div>
       )}
 
       {status === RequestStatus.Loaded && (
-        <main className='flex-grow py-20'>
+        <section className='flex-grow py-20'>
           <ul
             role='list'
             className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 list-none px-12 py-12 pb-28 justify-center items-center'
@@ -51,7 +57,7 @@ export default function PostsList() {
               <p className='text-center'>There are no results that match your search.</p>
             )}
           </ul>
-        </main>
+        </section>
       )}
     </>
   )

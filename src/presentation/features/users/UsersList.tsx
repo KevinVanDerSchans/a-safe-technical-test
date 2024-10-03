@@ -16,18 +16,24 @@ export default function UsersList() {
   return (
     <>
       {status === RequestStatus.Error && (
-        <main className='flex items-center justify-center min-h-screen'>
+        <div
+          aria-live='polite'
+          className='flex items-center justify-center min-h-screen'
+        >
           <ErrorFeedback
             message='Users are not available at this time.'
             onRetry={loadUsers}
           />
-        </main>
+        </div>
       )}
 
       {status === RequestStatus.Idle && (
-        <main className='flex items-center justify-center min-h-screen'>
-          <MainSpinner />
-        </main>
+        <div
+          aria-busy='true'
+          className='flex items-center justify-center min-h-screen'
+        >
+          <MainSpinner aria-label='Loading users...' />
+        </div>
       )}
 
       {status === RequestStatus.Loaded && (

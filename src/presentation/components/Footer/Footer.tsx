@@ -10,7 +10,7 @@ const Footer = () => {
       role='contentinfo'
       className='w-full'
     >
-      <main className='fixed bottom-0 flex justify-between w-full h-16 px-8 bg-[var(--primary)]'>
+      <div className='fixed bottom-0 flex justify-between w-full h-16 px-8 bg-[var(--primary)]'>
         <nav
           aria-label='Links to my Portfolio, LinkedIn and GitHub'
           className='flex items-center w-full pl-4 gap-x-4'
@@ -29,7 +29,6 @@ const Footer = () => {
         </div>
 
         <section
-          role='region'
           aria-labelledby='footer-contact'
           className='flex items-center'
         >
@@ -40,7 +39,7 @@ const Footer = () => {
             KEVIN SCHANS © <span className='text-xs'>2024</span>
           </address>
         </section>
-      </main>
+      </div>
     </footer>
   )
 }

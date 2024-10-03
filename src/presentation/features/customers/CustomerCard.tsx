@@ -11,6 +11,7 @@ export function CustomerCard({ item }: PropsType) {
   return (
     <li
       data-testid='user-card'
+      aria-label='Customer profile'
       className='bg-[var(--secondary)] rounded-lg shadow-lg p-6 flex flex-col text-center sm:items-center sm:text-center md:flex-row md:items-start gap-4 hover:shadow-xl transition-shadow duration-200 ease-in-out'
     >
       <div className='text-center flex items-center justify-center'>
@@ -24,16 +25,29 @@ export function CustomerCard({ item }: PropsType) {
         />
       </div>
 
-      <section className='flex-1 sm:flex sm:flex-col sm:items-center sm:text-center'>
+      <div className='flex-1 sm:flex sm:flex-col sm:items-center sm:text-center'>
         <h3 className='text-lg font-semibold text-[var(--primary)]'>
           {name.first} {name.last}
         </h3>
+
         <p className='text-sm'>
           {location.city}, {location.country}
         </p>
-        <p className='text-sm'>{phone}</p>
-        <p className='text-xs'>{email}</p>
-      </section>
+
+        <a
+          href={`tel:${phone}`}
+          className='text-sm text-[var(--primary)] underline'
+        >
+          {phone}
+        </a>
+
+        <a
+          href={`mailto:${email}`}
+          className='text-xs text-[var(--primary)] underline'
+        >
+          {email}
+        </a>
+      </div>
     </li>
   )
 }

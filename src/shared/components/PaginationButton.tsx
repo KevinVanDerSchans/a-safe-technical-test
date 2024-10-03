@@ -13,6 +13,7 @@ export const PaginationButton: React.FC<PaginationButtonProps> = ({ onClick, dis
       onClick={onClick}
       disabled={disabled}
       className={className}
+      aria-label={direction === 'previous' ? 'Go to previous page' : 'Go to next page'}
     >
       {direction === 'previous' ? 'Previous' : 'Next'}
     </button>

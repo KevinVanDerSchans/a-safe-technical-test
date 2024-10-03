@@ -14,6 +14,7 @@ const EmailInput = ({ email, setEmail }: EmailInputProps) => (
     >
       <ICONS.EmailIcon
         data-testid='login-email'
+        aria-hidden='true'
         className='inline-block w-6 h-6'
       />
       <span className='sr-only'>Email Address</span>

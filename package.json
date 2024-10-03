@@ -1,7 +1,8 @@
 {
   "name": "a-safe-technical-test",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
+  "author": "Kevin van der Schans Delgado",
   "description": "A-SAFE Technical Test built with React, NextJS, TypeScript and Redux",
   "scripts": {
     "dev": "next dev",

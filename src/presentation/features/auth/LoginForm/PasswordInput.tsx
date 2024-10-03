@@ -14,6 +14,7 @@ const PasswordInput = ({ password, setPassword }: PasswordInputProps) => (
     >
       <ICONS.PasswordIcon
         data-testid='password'
+        aria-hidden='true'
         className='inline-block w-6 h-6'
       />
       <span className='sr-only'>Password</span>
