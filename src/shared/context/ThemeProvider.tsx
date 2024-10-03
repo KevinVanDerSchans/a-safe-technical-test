@@ -1,21 +1,20 @@
 /* eslint-disable no-unused-vars */
 import { createContext, useContext, ReactNode } from 'react'
-import { useTheme } from '@features/theme/hooks/useTheme'
+import { useThemeSelector } from '@features/theme/hooks/useThemeSelector'
 import { errorService } from '@app/services/errors/ErrorService'
 import ThemeErrors from '@customErrors/ThemeErrors'
 
 interface ThemeContextType {
   theme: string
   changeTheme: (newTheme: string) => void
-  handleThemeChange: (event: React.ChangeEvent<HTMLSelectElement>) => void
 }
 
 const ThemeContext = createContext<ThemeContextType | null>(null)
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const { theme, changeTheme, handleThemeChange } = useTheme()
+  const { theme, changeTheme } = useThemeSelector()
 
-  return <ThemeContext.Provider value={{ theme, changeTheme, handleThemeChange }}>{children}</ThemeContext.Provider>
+  return <ThemeContext.Provider value={{ theme, changeTheme }}>{children}</ThemeContext.Provider>
 }
 
 export const useThemeContext = () => {

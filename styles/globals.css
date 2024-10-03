@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --light-accent: #0284c7;
+  --dark-accent: #4f46e5;
+  --solarized-accent: #e07a5f;
+}
+
 body,
 html {
   height: 100%;

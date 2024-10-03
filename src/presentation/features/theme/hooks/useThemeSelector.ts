@@ -1,10 +1,12 @@
 import { useState, useEffect, useMemo } from 'react'
+import { availableThemes } from '@features/theme/availableThemes'
 import { ThemeRepository } from '@repositories/themes/ThemeRepository'
 import { errorService } from '@app/services/errors/ErrorService'
 import ThemeErrors from '@customErrors/ThemeErrors'
 
-export const useTheme = () => {
+export const useThemeSelector = () => {
   const [theme, setTheme] = useState<string>('light')
+  const [isOpen, setIsOpen] = useState(false)
   const themeRepo = useMemo(() => new ThemeRepository(), [])
 
   useEffect(() => {
@@ -28,15 +30,32 @@ export const useTheme = () => {
       setTheme(newTheme)
       themeRepo.saveTheme(newTheme)
       document.documentElement.setAttribute('data-theme', newTheme)
+      setIsOpen(false)
     } catch (error) {
       errorService.handleError(new ThemeErrors.SaveThemeError())
       throw error
     }
   }
 
+  const toggleDropdown = () => {
+    setIsOpen(prev => !prev)
+  }
+
   const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     changeTheme(event.target.value)
   }
 
-  return { theme, changeTheme, handleThemeChange }
+  const handleThemeSelection = (themeName: string) => {
+    changeTheme(themeName)
+  }
+
+  return {
+    theme,
+    changeTheme,
+    handleThemeChange,
+    toggleDropdown,
+    handleThemeSelection,
+    isOpen,
+    availableThemes,
+  }
 }
