@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { createContext, useContext, ReactNode } from 'react'
 import { useTheme } from '@features/theme/hooks/useTheme'
+import { errorService } from '@app/services/errors/ErrorService'
+import ThemeErrors from '@customErrors/ThemeErrors'
 
 interface ThemeContextType {
   theme: string
@@ -20,6 +22,7 @@ export const useThemeContext = () => {
   const context = useContext(ThemeContext)
 
   if (!context) {
+    errorService.handleError(new ThemeErrors.ThemeError())
     throw new Error('useThemeContext must be used within a ThemeProvider')
   }
 
