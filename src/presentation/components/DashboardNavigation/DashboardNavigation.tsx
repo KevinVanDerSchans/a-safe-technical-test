@@ -14,7 +14,7 @@ const DashboardNavigation = () => {
         {dashboardNavigationLinks.map(link => (
           <li
             key={`${link.url}-${link.label}`}
-            className='flex-col text-[var(--secondary)]'
+            className='text-[var(--secondary)]'
           >
             <DashboardNavigationLink link={link} />
           </li>

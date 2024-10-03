@@ -4,7 +4,7 @@ import { ErrorProvider } from '@context/ErrorProvider'
 import ReduxProvider from '@context/ReduxProvider'
 import { ThemeProvider } from '@context/ThemeProvider'
 import MainLayout from '@layouts/MainLayout'
-import '@styles/globals.css'
+import '@styles/styles.css'
 
 function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (

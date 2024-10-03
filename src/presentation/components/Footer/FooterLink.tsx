@@ -11,7 +11,6 @@ const FooterLink = ({ link: { href, icon: Icon, ariaLabel, target, testId, rel }
       aria-label={ariaLabel}
       target={target}
       rel={rel}
-      role='link'
       data-testid={`${testId}-link`}
       className='primary-hover-scale-up'
     >

@@ -7,9 +7,11 @@ const ThemeSelector = () => {
     <div className='relative inline-block text-left items-center pt-2'>
       <div>
         <button
-          type='button'
-          className='primary-hover-button-transition rounded-sm focus:outline-none flex items-center'
           onClick={toggleDropdown}
+          type='button'
+          aria-expanded={isOpen}
+          aria-controls='theme-menu'
+          className='primary-hover-button-transition rounded-sm focus:outline-none flex items-center'
         >
           <div
             className='w-6 h-6 rounded-full mr-2'
@@ -17,18 +19,23 @@ const ThemeSelector = () => {
               backgroundColor: availableThemes.find(t => t.name === theme)?.color,
             }}
           />
-          {theme.charAt(0).toUpperCase() + theme.slice(1)}
+          <span aria-live='polite'>{theme.charAt(0).toUpperCase() + theme.slice(1)}</span>
         </button>
       </div>
 
       {isOpen && (
-        <div className='origin-bottom-right absolute bottom-full mb-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5'>
+        <div
+          id='theme-menu'
+          role='menu'
+          className='origin-bottom-right absolute bottom-full mb-2 w-56 rounded-md shadow-lg bg-[var(--secondary)]'
+        >
           <div className='py-1'>
             {availableThemes.map(t => (
               <button
                 key={t.name}
                 onClick={() => handleThemeSelection(t.name)}
-                className='flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+                role='menuitem'
+                className='flex items-center w-full px-4 py-2 text-sm text-[var(--primary)] hover:bg-[var(--accentLight)] hover:text-[var(--secondary)]'
               >
                 <div
                   className='w-6 h-6 rounded-full mr-2'

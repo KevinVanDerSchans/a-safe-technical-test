@@ -46,17 +46,33 @@ export function UserCard({ item }: PropsType) {
 
           <li className='text-sm'>
             <span className='text-xs font-semibold text-[var(--accent)]'>WEBSITE: </span>
-            <span className='text-[var(--primary)]'>{website}</span>
+            <a
+              href={`https://${website}`}
+              target='_blank'
+              className='text-[var(--primary)] underline'
+            >
+              {website}
+            </a>
           </li>
 
           <li className='text-sm'>
             <span className='text-xs font-semibold text-[var(--accent)]'>PHONE: </span>
-            <span className='text-[var(--primary)]'>{phone}</span>
+            <a
+              href={`tel:${phone}`}
+              className='text-[var(--primary)] underline'
+            >
+              {phone}
+            </a>
           </li>
 
           <li className='text-sm'>
             <span className='text-xs font-semibold text-[var(--accent)]'>EMAIL: </span>
-            <span className='text-[var(--primary)]'>{email}</span>
+            <a
+              href={`mailto:${email}`}
+              className='text-[var(--primary)] underline'
+            >
+              {email}
+            </a>
           </li>
         </ul>
       </section>

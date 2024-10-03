@@ -17,15 +17,18 @@ const Header = () => {
             <Image
               src={SVGS.LOGO}
               loading='lazy'
-              alt='A-SAFE company logo'
+              alt='A-SAFE DIGITAL company logo'
               className='w-16 h-16'
             />
-            <h2 className='w-24 py-0 my-0 leading-none text-[var(--secondary)]'>A-SAFE TECHNICAL TEST</h2>
+            <h1 className='w-24 py-0 my-0 leading-none text-[var(--secondary)]'>A-SAFE TECHNICAL TEST</h1>
           </figure>
         </Link>
       </div>
 
-      <nav className='flex gap-x-6'>
+      <nav
+        className='flex gap-x-6'
+        aria-label='Main navigation'
+      >
         <MainNavigation />
       </nav>
     </header>

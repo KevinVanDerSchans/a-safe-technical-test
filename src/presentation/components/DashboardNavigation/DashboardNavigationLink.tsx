@@ -14,10 +14,10 @@ const DashboardNavigationLink = ({ link: { url, label, icon: Icon, ariaLabel, te
     >
       <Icon
         data-testid={`${testId}`}
+        aria-hidden='true'
         className='w-10 h-10'
       />
       <span className='px-4'>{label}</span>
-      <span className='sr-only'>{label}</span>
     </Link>
   )
 }
