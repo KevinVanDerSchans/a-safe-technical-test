@@ -1,17 +1,15 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { RootState } from '@redux/store/store'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 import { usePosts } from '@features/posts/hooks/usePosts'
 import { useUsers } from '@features/users/hooks/useUsers'
-import { MainSpinner } from '@sharedComponents/MainSpinner'
 import { PostCard } from '@features/posts/PostCard'
+import { MainSpinner } from '@sharedComponents/MainSpinner'
+import ErrorFeedback from '@sharedComponents/ErrorFeedback'
+import { RequestStatus } from '@sharedTypes/RequestStatus'
 
 export default function PostsList() {
-  const { posts, loadPosts } = usePosts()
+  const { loadPosts, posts, status } = usePosts()
   const { loadUsers, users } = useUsers()
-  const { status } = useSelector((state: RootState) => state.posts)
 
   useEffect(() => {
     loadPosts()
@@ -20,13 +18,22 @@ export default function PostsList() {
 
   return (
     <>
-      {status === 'idle' && (
+      {status === RequestStatus.Error && (
+        <main className='flex items-center justify-center min-h-screen'>
+          <ErrorFeedback
+            message='Posts are not available at this time.'
+            onRetry={loadPosts}
+          />
+        </main>
+      )}
+
+      {status === RequestStatus.Idle && (
         <main className='flex items-center justify-center min-h-screen'>
           <MainSpinner />
         </main>
       )}
 
-      {status === 'loaded' && (
+      {status === RequestStatus.Loaded && (
         <main className='flex-grow py-20'>
           <ul
             role='list'

@@ -9,17 +9,19 @@ const postsSlice = createSlice({
   initialState: initialPostsManagementState,
   name: 'posts',
   reducers: {},
-
   extraReducers: builder => {
     builder.addCase(getPostsAsync.fulfilled, (state, { payload }: { payload: Post[] }) => {
       state.status = RequestStatus.Loaded
       state.posts = payload
+      state.error = null
     })
     builder.addCase(getPostsAsync.pending, state => {
       state.status = RequestStatus.Idle
+      state.error = null
     })
-    builder.addCase(getPostsAsync.rejected, state => {
+    builder.addCase(getPostsAsync.rejected, (state, action) => {
       state.status = RequestStatus.Error
+      state.error = action.error.message || 'Error loading Posts'
     })
   },
 })
