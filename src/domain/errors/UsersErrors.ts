@@ -7,8 +7,16 @@ class UsersErrorNotFound extends CustomError {
   }
 }
 
+class UsersErrorFetching extends CustomError {
+  constructor(message: string = 'Error when fetching Users') {
+    super(message)
+    this.name = 'UsersErrorFetching'
+  }
+}
+
 const UsersErrors = {
   UsersErrorNotFound,
+  UsersErrorFetching,
 }
 
 export default UsersErrors

@@ -6,6 +6,7 @@ import { UsersRepository } from '@repositories/users/UsersRepository'
 import { RootState, AppDispatch } from '@redux/store/store'
 import { getUsersAsync } from '@redux/slices/users/usersThunks'
 import { errorService } from '@app/services/errors/ErrorService'
+import UsersErrors from '@customErrors/UsersErrors'
 
 export function useFetchUsers() {
   const repo = useMemo(() => new UsersRepository(NEXT_PUBLIC_API_URL), [])
@@ -17,7 +18,8 @@ export function useFetchUsers() {
     try {
       await dispatch(getUsersAsync({ repo }))
     } catch (error) {
-      errorService.handleError(error as Error)
+      errorService.handleError(new UsersErrors.UsersErrorFetching())
+      throw error
     }
   }, [repo, dispatch])
 
