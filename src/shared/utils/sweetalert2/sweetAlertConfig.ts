@@ -1,6 +1,5 @@
-import Swal from 'sweetalert2'
-
-export const showLoginSuccessAlert = () => {
+export const showLoginSuccessAlert = async () => {
+  const Swal = (await import('sweetalert2')).default
   return Swal.fire({
     position: 'bottom-end',
     icon: 'success',
@@ -10,7 +9,8 @@ export const showLoginSuccessAlert = () => {
   })
 }
 
-export const showLoginErrorAlert = () => {
+export const showLoginErrorAlert = async () => {
+  const Swal = (await import('sweetalert2')).default
   return Swal.fire({
     icon: 'error',
     title: 'Oops...',
