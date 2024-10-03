@@ -5,7 +5,7 @@ import { getCustomersAsync } from '@redux/slices/customers/customersThunks'
 import { usePagination } from '@sharedHooks/usePagination'
 import { errorService } from '@app/services/errors/ErrorService'
 
-export function useCustomers() {
+export function useFetchCustomers() {
   const repoUrl = useMemo(() => `/api/customers`, [])
 
   const { customers, status, error } = useSelector((state: RootState) => state.customers)

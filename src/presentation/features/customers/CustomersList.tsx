@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-import { useCustomers } from '@features/customers/hooks/useCustomers'
+import { useFetchCustomers } from '@features/customers/hooks/useFetchCustomers'
 import { CustomerCard } from '@features/customers/CustomerCard'
 import { MainSpinner } from '@sharedComponents/MainSpinner'
 import { PaginationButton } from '@sharedComponents/PaginationButton'
@@ -8,7 +8,7 @@ import ErrorFeedback from '@sharedComponents/ErrorFeedback'
 import { RequestStatus } from '@sharedTypes/RequestStatus'
 
 export default function CustomersList() {
-  const { loadCustomers, customers, status, page, handleNextPage, handlePrevPage } = useCustomers()
+  const { loadCustomers, customers, status, page, handleNextPage, handlePrevPage } = useFetchCustomers()
 
   useEffect(() => {
     loadCustomers()

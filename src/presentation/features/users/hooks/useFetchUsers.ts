@@ -7,7 +7,7 @@ import { RootState, AppDispatch } from '@redux/store/store'
 import { getUsersAsync } from '@redux/slices/users/usersThunks'
 import { errorService } from '@app/services/errors/ErrorService'
 
-export function useUsers() {
+export function useFetchUsers() {
   const repo = useMemo(() => new UsersRepository(NEXT_PUBLIC_API_URL), [])
 
   const { users, status, error } = useSelector((state: RootState) => state.users)

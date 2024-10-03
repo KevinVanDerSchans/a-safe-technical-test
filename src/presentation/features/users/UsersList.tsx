@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 
-import { useUsers } from '@features/users/hooks/useUsers'
+import { useFetchUsers } from '@features/users/hooks/useFetchUsers'
 import { UserCard } from '@features/users/UserCard'
 import { MainSpinner } from '@sharedComponents/MainSpinner'
 import ErrorFeedback from '@sharedComponents/ErrorFeedback'
 import { RequestStatus } from '@sharedTypes/RequestStatus'
 
 export default function UsersList() {
-  const { loadUsers, users, status } = useUsers()
+  const { loadUsers, users, status } = useFetchUsers()
 
   useEffect(() => {
     loadUsers()

@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
 import { Bar } from 'react-chartjs-2'
 
-import { useUsers } from '@features/users/hooks/useUsers'
+import { useFetchUsers } from '@features/users/hooks/useFetchUsers'
 import { getWebExtensionChartData } from '@features/charts/WebExtensionChart/webExtensionChartConfig'
 import { MainSpinner } from '@sharedComponents/MainSpinner'
 import ErrorFeedback from '@sharedComponents/ErrorFeedback'
 import { RequestStatus } from '@sharedTypes/RequestStatus'
 
 const WebExtensionChart: React.FC = () => {
-  const { loadUsers, users, status } = useUsers()
+  const { loadUsers, users, status } = useFetchUsers()
 
   useEffect(() => {
     loadUsers()

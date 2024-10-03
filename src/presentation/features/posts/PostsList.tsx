@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react'
 
-import { usePosts } from '@features/posts/hooks/usePosts'
-import { useUsers } from '@features/users/hooks/useUsers'
+import { useFetchPosts } from '@features/posts/hooks/useFetchPosts'
+import { useFetchUsers } from '@features/users/hooks/useFetchUsers'
 import { PostCard } from '@features/posts/PostCard'
 import { MainSpinner } from '@sharedComponents/MainSpinner'
 import ErrorFeedback from '@sharedComponents/ErrorFeedback'
 import { RequestStatus } from '@sharedTypes/RequestStatus'
 
 export default function PostsList() {
-  const { loadPosts, posts, status } = usePosts()
-  const { loadUsers, users } = useUsers()
+  const { loadPosts, posts, status } = useFetchPosts()
+  const { loadUsers, users } = useFetchUsers()
 
   useEffect(() => {
     loadPosts()

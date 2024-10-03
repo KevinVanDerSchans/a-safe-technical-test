@@ -7,7 +7,7 @@ import { AppDispatch, RootState } from '@redux/store/store'
 import { getPostsAsync } from '@redux/slices/posts/postsThunks'
 import { errorService } from '@app/services/errors/ErrorService'
 
-export function usePosts() {
+export function useFetchPosts() {
   const repo = useMemo(() => new PostsRepository(NEXT_PUBLIC_API_URL), [])
 
   const { posts, status, error } = useSelector((state: RootState) => state.posts)
