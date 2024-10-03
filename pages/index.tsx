@@ -1,17 +1,14 @@
 import React from 'react'
-import Head from 'next/head'
+import Seo from '@sharedComponents/Seo'
 import PostsList from '@features/posts/PostsList'
 
 export default function HomePage() {
   return (
     <>
-      <Head>
-        <title>A-SAFE DIGITAL</title>
-        <meta
-          name='description'
-          content='Built with React, NextJS, TypeScript and Redux'
-        />
-      </Head>
+      <Seo
+        title='A-SAFE DIGITAL'
+        description='Welcome to the homepage of A-SAFE DIGITAL.'
+      />
       <main className='flex items-center justify-center'>
         <PostsList />
       </main>

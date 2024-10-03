@@ -1,5 +1,5 @@
 import React from 'react'
-import Head from 'next/head'
+import Seo from '@sharedComponents/Seo'
 import { GetServerSideProps } from 'next'
 import { useSession } from 'next-auth/react'
 import { checkDashboardPageSession } from '@app/services/auth/checkDashboardPageSession'
@@ -11,13 +11,10 @@ export default function UsersPage() {
 
   return (
     <>
-      <Head>
-        <title>A-SAFE DIGITAL - Users</title>
-        <meta
-          name='description'
-          content='Built with React, NextJS, TypeScript and Redux'
-        />
-      </Head>
+      <Seo
+        title='A-SAFE DIGITAL - Users'
+        description='Manage user profiles in A-SAFE DIGITAL and view detailed user information.'
+      />
       <main className='flex items-center justify-center'>
         {session ? (
           <DashboardLayout>
