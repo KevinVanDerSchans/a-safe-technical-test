@@ -2,9 +2,9 @@ import React from 'react'
 import Seo from '@sharedComponents/Seo'
 import { GetServerSideProps } from 'next'
 import { useSession } from 'next-auth/react'
-import { checkDashboardPageSession } from '@app/services/auth/checkDashboardPageSession'
+import { checkDashboardPageSession } from '@auth/services/checkDashboardPageSession'
 import DashboardLayout from '@layouts/DashboardLayout'
-import CustomersList from '@features/customers/CustomersList'
+import CustomersList from '@customers/components/CustomersList'
 
 export default function CustomersPage() {
   const { data: session } = useSession()

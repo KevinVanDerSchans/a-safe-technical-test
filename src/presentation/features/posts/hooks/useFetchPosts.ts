@@ -2,11 +2,11 @@ import { useCallback, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { NEXT_PUBLIC_API_URL } from '@config/env'
-import { PostsRepository } from '@repositories/posts/PostsRepository'
+import { PostsRepository } from '@posts/repositories/PostsRepository'
 import { AppDispatch, RootState } from '@redux/store/store'
-import { getPostsAsync } from '@redux/slices/posts/postsThunks'
-import { errorService } from '@app/services/errors/ErrorService'
-import PostsErrors from '@customErrors/PostsErrors'
+import { getPostsAsync } from '@posts/redux/postsThunks'
+import { errorService } from '@errors/services/ErrorService'
+import PostsErrors from '@posts/errors/PostsErrors'
 
 export function useFetchPosts() {
   const repo = useMemo(() => new PostsRepository(NEXT_PUBLIC_API_URL), [])

@@ -17,6 +17,7 @@
     "react/prop-types": "off",
     "eqeqeq": ["error", "always"]
   },
+  "ignorePatterns": ["generateProjectStructure.js"],
   "settings": {
     "import/resolver": {
       "typescript": {

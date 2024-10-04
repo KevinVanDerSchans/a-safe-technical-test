@@ -3,8 +3,8 @@ import { useState } from 'react'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import { showLoginSuccessAlert, showLoginErrorAlert } from '@utils/sweetalert2/sweetAlertConfig'
-import { errorService } from '@app/services/errors/ErrorService'
-import AuthErrors from '@customErrors/AuthErrors'
+import { errorService } from '@errors/services/ErrorService'
+import AuthErrors from '@auth/errors/AuthErrors'
 
 const useLoginForm = () => {
   const [email, setEmail] = useState('')

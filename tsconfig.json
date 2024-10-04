@@ -16,28 +16,27 @@
     "paths": {
       "@app/*": ["src/app/*"],
       "@pages/*": ["pages/*"],
-      "@services/*": ["src/app/services/*"],
-      "@errors/*": ["src/app/services/errors/*"],
-      "@customErrors/*": ["src/domain/errors/*"],
       "@entities/*": ["src/domain/entities/*"],
-      "@mainTypes/*": ["src/domain/types/*"],
-      "@api/*": ["src/infrastructure/api/*"],
       "@config/*": ["src/infrastructure/config/*"],
       "@redux/*": ["src/infrastructure/redux/*"],
-      "@repositories/*": ["src/infrastructure/repositories/*"],
-      "@components/*": ["src/presentation/components/*"],
-      "@features/*": ["src/presentation/features/*"],
       "@layouts/*": ["src/presentation/layouts/*"],
       "@sharedHooks/*": ["src/shared/hooks/*"],
       "@sharedComponents/*": ["src/shared/components/*"],
       "@sharedTypes/*": ["src/shared/types/*"],
       "@constants/*": ["src/shared/constants/*"],
       "@context/*": ["src/shared/context/*"],
+      "@errors/*": ["src/shared/errors/*"],
       "@utils/*": ["src/shared/utils/*"],
-      "@icons/*": ["public/icons/*"],
-      "@images/*": ["public/images/*"],
       "@svgs/*": ["public/svgs/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+
+      "@users/*": ["src/presentation/features/users/*"],
+      "@posts/*": ["src/presentation/features/posts/*"],
+      "@customers/*": ["src/presentation/features/customers/*"],
+      "@auth/*": ["src/presentation/features/auth/*"],
+      "@dashboard/*": ["src/presentation/features/dashboard/*"],
+      "@theme/*": ["src/presentation/features/theme/*"],
+      "@charts/*": ["src/presentation/features/charts/*"]
     },
     "plugins": [
       {

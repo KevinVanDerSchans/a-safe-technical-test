@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { createContext, useContext, ReactNode } from 'react'
-import { useThemeSelector } from '@features/theme/hooks/useThemeSelector'
-import { errorService } from '@app/services/errors/ErrorService'
-import ThemeErrors from '@customErrors/ThemeErrors'
+import { useThemeSelector } from '@theme/hooks/useThemeSelector'
+import { errorService } from '@errors/services/ErrorService'
+import ThemeErrors from '@theme/errors/ThemeErrors'
 
 interface ThemeContextType {
   theme: string

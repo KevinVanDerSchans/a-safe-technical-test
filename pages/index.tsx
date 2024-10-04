@@ -1,6 +1,6 @@
 import React from 'react'
 import Seo from '@sharedComponents/Seo'
-import PostsList from '@features/posts/PostsList'
+import PostsList from '@posts/components/PostsList'
 
 export default function HomePage() {
   return (
