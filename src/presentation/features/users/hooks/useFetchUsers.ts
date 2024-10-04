@@ -2,11 +2,11 @@ import { useCallback, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { NEXT_PUBLIC_API_URL } from '@config/env'
-import { UsersRepository } from '@repositories/users/UsersRepository'
+import { UsersRepository } from '@users/repositories/UsersRepository'
 import { RootState, AppDispatch } from '@redux/store/store'
-import { getUsersAsync } from '@redux/slices/users/usersThunks'
-import { errorService } from '@app/services/errors/ErrorService'
-import UsersErrors from '@customErrors/UsersErrors'
+import { getUsersAsync } from '@users/redux/usersThunks'
+import { errorService } from '@errors/services/ErrorService'
+import UsersErrors from '@users/errors/UsersErrors'
 
 export function useFetchUsers() {
   const repo = useMemo(() => new UsersRepository(NEXT_PUBLIC_API_URL), [])

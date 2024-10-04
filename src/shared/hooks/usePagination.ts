@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 import { CUSTOMERS_PAGINATION_RESULTS_PER_PAGE } from '@config/env'
-import { errorService } from '@app/services/errors/ErrorService'
-import PaginationErrors from '@customErrors/PaginationErrors'
+import { errorService } from '@errors/services/ErrorService'
+import PaginationErrors from '@errors/errors/PaginationErrors'
 
 export function usePagination(initialPage = 1) {
   const [page, setPage] = useState(initialPage)

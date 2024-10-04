@@ -1,5 +1,5 @@
 import React from 'react'
-import DashboardSidebar from '@features/dashboard/DashboardSidebar'
+import DashboardSidebar from '@dashboard/components/DashboardSidebar/DashboardSidebar'
 
 const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (

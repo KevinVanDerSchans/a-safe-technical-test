@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from 'react'
-import { availableThemes } from '@features/theme/availableThemes'
-import { ThemeRepository } from '@repositories/themes/ThemeRepository'
-import { errorService } from '@app/services/errors/ErrorService'
-import ThemeErrors from '@customErrors/ThemeErrors'
+import { availableThemes } from '@theme/constants/availableThemes'
+import { ThemeRepository } from '@theme/repositories/ThemeRepository'
+import { errorService } from '@errors/services/ErrorService'
+import ThemeErrors from '@theme/errors/ThemeErrors'
 
 export const useThemeSelector = () => {
   const [theme, setTheme] = useState<string>('light')
