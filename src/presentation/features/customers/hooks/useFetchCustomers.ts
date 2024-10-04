@@ -1,10 +1,10 @@
 import { useCallback, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState, AppDispatch } from '@redux/store/store'
-import { getCustomersAsync } from '@redux/slices/customers/customersThunks'
+import { getCustomersAsync } from '@customers/redux/customersThunks'
 import { usePagination } from '@sharedHooks/usePagination'
-import { errorService } from '@app/services/errors/ErrorService'
-import CustomersErrors from '@customErrors/CustomersErrors'
+import { errorService } from '@errors/services/ErrorService'
+import CustomersErrors from '@customers/errors/CustomersErrors'
 
 export function useFetchCustomers() {
   const repoUrl = useMemo(() => `/api/customers`, [])

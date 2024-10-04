@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 
-import { useFetchCustomers } from '@features/customers/hooks/useFetchCustomers'
-import { CustomerCard } from '@features/customers/CustomerCard'
-import { MainSpinner } from '@sharedComponents/MainSpinner'
-import { PaginationButton } from '@sharedComponents/PaginationButton'
-import ErrorFeedback from '@sharedComponents/ErrorFeedback'
+import { useFetchCustomers } from '@customers/hooks/useFetchCustomers'
+import { CustomerCard } from '@customers/components/CustomerCard'
+import { MainSpinner } from '@sharedComponents/loaders/MainSpinner'
+import { PaginationButton } from '@sharedComponents/pagination/PaginationButton'
+import ErrorFeedback from '@errors/components/ErrorFeedback'
 import { RequestStatus } from '@sharedTypes/RequestStatus'
 
 export default function CustomersList() {

@@ -1,8 +1,8 @@
 import React from 'react'
 import Seo from '@sharedComponents/Seo'
 import { GetServerSideProps } from 'next'
-import { checkLoginPageSession } from '@app/services/auth/checkLoginPageSession'
-import LoginForm from '@features/auth/LoginForm/LoginForm'
+import { checkLoginPageSession } from '@auth/services/checkLoginPageSession'
+import LoginForm from '@auth/components/LoginForm'
 
 export default function LoginPage() {
   return (

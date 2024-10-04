@@ -2,7 +2,7 @@ import React from 'react'
 import Seo from '@sharedComponents/Seo'
 import { GetServerSideProps } from 'next'
 import { useSession } from 'next-auth/react'
-import { checkDashboardPageSession } from '@app/services/auth/checkDashboardPageSession'
+import { checkDashboardPageSession } from '@auth/services/checkDashboardPageSession'
 import DashboardLayout from '@layouts/DashboardLayout'
 
 export default function DashboardPage() {
@@ -20,7 +20,7 @@ export default function DashboardPage() {
           <main className='flex items-center justify-center min-h-screen px-4'>
             <div className='flex flex-col items-center text-center pb-8'>
               <h1 className='text-3xl md:text-5xl'>DASHBOARD</h1>
-              <h2 className='mt-4 text-lg md:text-xl'>Choose an option in the Dashboard navigation bar.</h2>
+              <h2 className='mt-4 text-lg md:text-xl'>Choose an option in the Dashboard navigation bar</h2>
             </div>
           </main>
         </DashboardLayout>

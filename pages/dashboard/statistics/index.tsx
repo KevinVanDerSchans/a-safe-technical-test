@@ -2,9 +2,9 @@ import React from 'react'
 import Seo from '@sharedComponents/Seo'
 import { GetServerSideProps } from 'next'
 import { useSession } from 'next-auth/react'
-import { checkDashboardPageSession } from '@app/services/auth/checkDashboardPageSession'
+import { checkDashboardPageSession } from '@auth/services/checkDashboardPageSession'
 import DashboardLayout from '@layouts/DashboardLayout'
-import WebExtensionChart from '@features/charts/WebExtensionChart/WebExtensionChart'
+import WebExtensionChart from '@charts/components/WebExtensionChart/WebExtensionChart'
 
 export default function StatisticsPage() {
   const { data: session } = useSession()

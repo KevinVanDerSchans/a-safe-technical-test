@@ -1,9 +1,9 @@
 'use client'
-import useLoginForm from '@features/auth/hooks/useLoginForm'
-import EmailInput from '@features/auth/LoginForm/EmailInput'
-import PasswordInput from '@features/auth/LoginForm/PasswordInput'
-import SubmitButton from '@features/auth/LoginForm/SubmitButton'
-import ForgotCredentials from '@features/auth/LoginForm/ForgotCredentials'
+import useLoginForm from '@auth/hooks/useLoginForm'
+import EmailInput from '@auth/components/EmailInput'
+import PasswordInput from '@auth/components/PasswordInput'
+import SubmitButton from '@auth/components/SubmitButton'
+import ForgotCredentials from '@auth/components/ForgotCredentials'
 
 const LoginForm = () => {
   const { email, setEmail, password, setPassword, isSubmitting, handleSubmit } = useLoginForm()

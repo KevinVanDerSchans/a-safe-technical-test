@@ -1,7 +1,7 @@
 import React from 'react'
 import ICONS from '@constants/icons'
-import useToggleSidebar from '@features/dashboard/hooks/useToggleSidebar'
-import DashboardNavigation from '@components/DashboardNavigation/DashboardNavigation'
+import useToggleSidebar from '@dashboard/hooks/useToggleSidebar'
+import DashboardNavigation from '@dashboard/components/DashboardNavigation/DashboardNavigation'
 
 const DashboardSidebar = () => {
   const { isSidebarOpen, toggleSidebar } = useToggleSidebar()

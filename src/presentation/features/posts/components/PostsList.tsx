@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 
-import { useFetchPosts } from '@features/posts/hooks/useFetchPosts'
-import { useFetchUsers } from '@features/users/hooks/useFetchUsers'
-import { PostCard } from '@features/posts/PostCard'
-import { MainSpinner } from '@sharedComponents/MainSpinner'
-import ErrorFeedback from '@sharedComponents/ErrorFeedback'
+import { useFetchPosts } from '@posts/hooks/useFetchPosts'
+import { useFetchUsers } from '@users/hooks/useFetchUsers'
+import { PostCard } from '@posts/components/PostCard'
+import { MainSpinner } from '@sharedComponents/loaders/MainSpinner'
+import ErrorFeedback from 'src/shared/errors/components/ErrorFeedback'
 import { RequestStatus } from '@sharedTypes/RequestStatus'
 
 export default function PostsList() {
