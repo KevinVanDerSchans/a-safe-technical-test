@@ -25,7 +25,7 @@ export function CustomerCard({ item }: PropsType) {
         />
       </div>
 
-      <div className='flex flex-col sm:flex sm:items-center sm:text-center space-y-2 md:space-y-4'>
+      <div className='flex flex-col sm:flex sm:items-center sm:text-center space-y-2'>
         <h3 className='text-lg font-semibold text-[var(--primary)]'>
           {name.first} {name.last}
         </h3>

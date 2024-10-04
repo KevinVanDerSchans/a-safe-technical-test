@@ -570,7 +570,7 @@ video {
 [data-theme="dark"] {
   --background: #121212;
   --foreground: #e2e8f0;
-  --primary: #f7fafc;
+  --primary: #9ca3af;
   --secondary: #2d3748;
   --accent: #7f9cf5;
   --accentLight: #a3bffa;
@@ -947,10 +947,6 @@ video {
 
 .bg-\[var\(--errorLight\)\] {
   background-color: var(--errorLight);
-}
-
-.bg-\[var\(--muted\)\] {
-  background-color: var(--muted);
 }
 
 .bg-\[var\(--primary\)\] {
@@ -1426,12 +1422,6 @@ html {
 
   .md\:gap-4 {
     gap: 1rem;
-  }
-
-  .md\:space-y-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
 
   .md\:px-8 {
