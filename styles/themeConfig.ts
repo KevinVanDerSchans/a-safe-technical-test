@@ -14,11 +14,11 @@ const themeConfig = {
   dark: {
     background: '#121212',
     foreground: '#e2e8f0',
-    primary: '#a0aec0',
+    primary: '#f7fafc',
     secondary: '#2d3748',
     accent: '#7f9cf5',
     accentLight: '#a3bffa',
-    muted: '#4a5568',
+    muted: '#f7fafc',
     error: '#f56565',
     errorLight: '#feb2b2',
     errorText: '#c53030',
