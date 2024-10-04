@@ -6,7 +6,7 @@ import MainNavigation from '@sharedComponents/navigation/MainNavigation'
 
 const Header = () => {
   return (
-    <header className='bg-[var(--primary)] fixed z-10 flex items-center w-full h-16 p-1 px-8 m-0'>
+    <header className='bg-[var(--primary)] fixed z-10 flex items-center w-full h-16 p-1 px-4 md:px-8 m-0'>
       <div className='flex justify-between w-full'>
         <Link
           href='/'
