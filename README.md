@@ -40,7 +40,9 @@
     - [Prerequisites](#prerequisites)
     - [Clone the repository](#clone-the-repository)
     - [.env.local file](#envlocal-file)
+    - [cypress.env.json file](#cypressenvjson-file)
     - [Install dependencies](#install-dependencies)
+    - [Scripts](#scripts)
     - [Run the development server](#run-the-development-server)
     - [Access the application](#access-the-application)
     - [Learn More](#learn-more)
@@ -131,6 +133,10 @@ Clone the repository to your local machine using the following command:
 
 Make sure to create a .env.local file in the project root for the necessary environment variables.
 
+### cypress.env.json file
+
+Replace the file name from cypress.env.example.json to cypress.env.json and add your login details.
+
 ### Install dependencies
 
 Install the project dependencies using the following command:
@@ -139,10 +145,18 @@ Install the project dependencies using the following command:
   npm install
 ```
 
+### Scripts
+
 Compile and Minify for Production
 
 ```sh
   npm run build
+```
+
+Lint with [Cypress](https://www.cypress.io/)
+
+```sh
+  npm run cypress
 ```
 
 Lint with [ESLint](https://eslint.org/)
@@ -366,6 +380,7 @@ understand:
     <br>
     <a href="https://redux.js.org/" target="_blank" rel="noreferrer"> <img src="public/readme/svgs/redux.svg" alt="Redux" width="60" height="60" style="margin-right: 24px"/></a>
     <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="public/readme/svgs/tailwind.svg" alt="TailwindCSS" width="60" height="60" style="margin-right: 24px"/></a>
+    <a href="https://www.cypress.io/" target="_blank" rel="noreferrer"> <img src="public/readme/svgs/cypress.svg" alt="Cypress" width="60" height="60" style="margin-right: 24px"/></a>
   <br>
 </div>
 
