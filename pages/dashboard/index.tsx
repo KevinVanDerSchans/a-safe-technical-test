@@ -12,7 +12,7 @@ export default function DashboardPage() {
     <>
       <Seo
         title='A-SAFE DIGITAL - Dashboard'
-        description='Access your A-SAFE DIGITAL dashboard to view personalized insights.'
+        description='Access your A-SAFE DIGITAL dashboard to view personalized insights'
       />
 
       {session ? (

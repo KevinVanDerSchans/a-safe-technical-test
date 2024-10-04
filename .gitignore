@@ -22,6 +22,8 @@
 
 # production
 /build
+generateProjectStructure.js
+structure.txt
 
 # misc
 .DS_Store
