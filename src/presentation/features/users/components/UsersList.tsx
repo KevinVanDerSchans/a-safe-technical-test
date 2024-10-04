@@ -14,7 +14,10 @@ export default function UsersList() {
   }, [loadUsers])
 
   return (
-    <>
+    <div
+      aria-live='polite'
+      className='flex-grow flex flex-col pt-8 py-12'
+    >
       {status === RequestStatus.Error && (
         <div
           aria-live='polite'
@@ -49,6 +52,6 @@ export default function UsersList() {
           ))}
         </ul>
       )}
-    </>
+    </div>
   )
 }

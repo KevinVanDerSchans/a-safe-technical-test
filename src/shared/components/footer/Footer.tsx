@@ -10,7 +10,7 @@ const Footer = () => {
       role='contentinfo'
       className='w-full'
     >
-      <div className='fixed bottom-0 flex justify-between w-full h-16 px-8 bg-[var(--primary)]'>
+      <div className='fixed bottom-0 flex justify-between w-full h-16 px-4 md:px-8 bg-[var(--primary)]'>
         <nav
           aria-label='Links to my Portfolio, LinkedIn and GitHub'
           className='flex items-center w-full pl-4 gap-x-4'
