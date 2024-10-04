@@ -10,7 +10,7 @@ const DashboardSidebar = () => {
     <>
       <section className='pt-16'>
         <div className='bg-[var(--secondary)] text-[var(--secondary)] md:hidden flex justify-between items-center p-4'>
-          <h2 className='text-lg font-bold text-[--var(primary)]'>DASHBOARD</h2>
+          <h2 className='text-lg font-bold text-[var(--primary)]'>DASHBOARD</h2>
 
           <button
             onClick={toggleSidebar}
