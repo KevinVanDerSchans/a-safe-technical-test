@@ -25,15 +25,17 @@
 
 <br>
 
+---
+
 # Index
 
 - [A-SAFE DIGITAL Technical Test](#a-safe-digital-technical-test)
   - [NextJS / ReactTS / Redux / TailwindCSS](#nextjs--reactts--redux--tailwindcss)
 - [Index](#index)
-  - [**DEPLOY**: https://a-safe-technical-test.vercel.app](#deploy--httpsa-safe-technical-testvercelapp)
+  - [**DEPLOY**](#deploy)
   - [Deployment credentials](#deployment-credentials)
-    - [EMAIL](#email)
-    - [PASSWORD](#password)
+    - [**EMAIL**](#email)
+    - [**PASSWORD**](#password)
   - [Project Setup](#project-setup)
     - [Prerequisites](#prerequisites)
     - [Clone the repository](#clone-the-repository)
@@ -46,14 +48,15 @@
     - [Dependency Inversion Principle (DIP)](#dependency-inversion-principle-dip)
     - [Layered Architecture (Layered Pattern)](#layered-architecture-layered-pattern)
     - [Repository Pattern](#repository-pattern)
+    - [Screaming Architecture](#screaming-architecture)
     - [Entity Pattern](#entity-pattern)
     - [Presentation Component Pattern and Containers](#presentation-component-pattern-and-containers)
     - [Centralized Error Handling Standard](#centralized-error-handling-standard)
-    - [Screaming Architecture](#screaming-architecture)
   - [Domain Model](#domain-model)
     - [Key Entities](#key-entities)
     - [Relationships](#relationships)
     - [Design Rationale](#design-rationale)
+  - [Clean Code Principles Followed](#clean-code-principles-followed)
   - [Lighthouse results](#lighthouse-results)
   - [Features](#features)
   - [Technologies and Tools used](#technologies-and-tools-used)
@@ -63,19 +66,25 @@
 
 <br>
 
-### **DEPLOY**: <br> https://a-safe-technical-test.vercel.app
+### **DEPLOY**
+
+<div align="center">
+  <a href="https://a-safe-technical-test.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/Visit%20App-Click%20Here-blue?style=for-the-badge">
+  </a>
+</div>
 
 <br>
 
 ## Deployment credentials
 
-### EMAIL
+### **EMAIL**
 
 ```bash
 kevinvdsd@asafe.com
 ```
 
-### PASSWORD
+### **PASSWORD**
 
 ```bash
 mPJfMERwCA
@@ -87,8 +96,8 @@ run the project locally, you can **add these credentials to your own .env.local 
 These data are used for authentication purposes within the application. They represent a mock email and password for
 development and testing. You may define them with **your own values** during local development.
 
-**Note: In a real-world scenario, authentication should be handled by a secure back-end service. Sensitive user data
-(like passwords) should never be hard-coded or stored in environment variables for production environments.**
+> **IMPORTANT: In a real-world scenario, authentication should be handled by a secure back-end service. Sensitive user
+> data (like passwords) should never be hard-coded or stored in environment variables for production environments.**
 
 <br>
 
@@ -190,6 +199,15 @@ responsibilities and more flexible, maintainable code.
 For example, `UsersRepository` enables switching between different data sources (such as APIs or databases) without
 affecting the core domain logic, ensuring easy extensibility.
 
+### Screaming Architecture
+
+Following the principles of **Screaming Architecture**, the project structure was organized so that the core business
+logic and domain model "shout out" what the application does. Each feature, such as `users` or `posts`, is encapsulated
+in its own directory, containing all related components, services, repositories, and state management.
+
+This organization highlights the system's purpose and functionality, making the codebase more intuitive and maintainable
+by reducing technical clutter.
+
 ### Entity Pattern
 
 In this project, we have three entities: `User`, `Post`, and `Customer`. This pattern represents **key domain data**,
@@ -211,15 +229,6 @@ consistently across all layers**. This module captures errors from various failu
 business logic exceptions), logs them for monitoring, and **returns user-friendly messages to the UI**. This provides a
 uniform approach to error handling, improving maintainability and debuggability.
 
-### Screaming Architecture
-
-Following the principles of **Screaming Architecture**, the project structure was organized so that the core business
-logic and domain model "shout out" what the application does. Each feature, such as `users` or `posts`, is encapsulated
-in its own directory, containing all related components, services, repositories, and state management.
-
-This organization highlights the system's purpose and functionality, making the codebase more intuitive and maintainable
-by reducing technical clutter.
-
 <br>
 
 ## Domain Model
@@ -231,8 +240,15 @@ data persistence.
 
 ### Key Entities
 
-- **User**: Represents an individual interacting with the system, associated with `Post` entity. Each `User` contains
-  the following attributes:
+| Entity       | Description                                                                  |
+| ------------ | ---------------------------------------------------------------------------- |
+| **User**     | Represents an individual interacting with the system, associated with Posts. |
+| **Post**     | Represents content that comes from Users.                                    |
+| **Customer** | Represents a real customer of the system, with additional personal details.  |
+
+<br>
+
+- **User**: Each `User` contains the following attributes:
 
   - `id`: A unique identifier for the user.
   - `name`: The full name of the user.
@@ -243,14 +259,14 @@ data persistence.
   - `phone`: The user's phone number.
   - `website`: The user's personal or business website.
 
-- **Post**: Represents content that comes from Users. A `Post` is tied to a `User` and has the following attributes:
+- **Post**: A `Post` is tied to a `User` and has the following attributes:
 
   - `id`: A unique identifier for the post.
   - `userId`: The ID of the user who created the post, linking the post to the `User`.
   - `title`: The title of the post.
   - `body`: The main content of the post.
 
-- **Customer**: Represents a real customer of the system, with additional personal details. Each `Customer` contains:
+- **Customer**: Each `Customer` contains:
   - `gender`: The gender of the customer.
   - `name`: An object representing the customer's first and last name.
   - `location`: An object representing the customer's city and country.
@@ -285,13 +301,33 @@ impact the business logic.
 
 <br>
 
+## Clean Code Principles Followed
+
+In this project, I have adhered to several core Clean Code principles to ensure readability, maintainability and
+scalability. These principles guide the overall structure and help maintain a codebase that is easy to extend and
+understand:
+
+<div>
+
+    SRP (Single Responsibility Principle)
+
+    DRY (Don’t Repeat Yourself)
+
+    KISS (Keep It Simple, Stupid)
+
+    YAGNI (You Aren’t Gonna Need It)
+
+</div>
+
+<br>
+
 ## Lighthouse results
 
 <div align="center">
   <img
     src="public/readme/lighthouse-results.png"
-    alt="Project overview"
-    width="850"
+    alt="Lighthouse results"
+    width="700"
   >
 </div>
 
