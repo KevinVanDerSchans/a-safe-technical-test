@@ -12,7 +12,7 @@ const LoginForm = () => {
     <main className='absolute inset-0 flex flex-col items-center justify-center'>
       <form
         onSubmit={handleSubmit}
-        className='p-12 bg-[var(--muted)] w-80'
+        className='p-12 bg-[var(--secondary)] w-80'
       >
         <fieldset>
           <legend className='sr-only'>Login Information</legend>

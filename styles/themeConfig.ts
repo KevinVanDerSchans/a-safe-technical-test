@@ -14,7 +14,7 @@ const themeConfig = {
   dark: {
     background: '#121212',
     foreground: '#e2e8f0',
-    primary: '#f7fafc',
+    primary: '#9ca3af',
     secondary: '#2d3748',
     accent: '#7f9cf5',
     accentLight: '#a3bffa',
