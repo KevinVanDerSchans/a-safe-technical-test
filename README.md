@@ -27,6 +27,40 @@
 
 # Index
 
+- [A-SAFE DIGITAL Technical Test](#a-safe-digital-technical-test)
+  - [NextJS / ReactTS / Redux / TailwindCSS](#nextjs--reactts--redux--tailwindcss)
+- [Index](#index)
+  - [**DEPLOY**: https://a-safe-technical-test.vercel.app](#deploy--httpsa-safe-technical-testvercelapp)
+  - [Deployment credentials](#deployment-credentials)
+    - [EMAIL](#email)
+    - [PASSWORD](#password)
+  - [Project Setup](#project-setup)
+    - [Prerequisites](#prerequisites)
+    - [Clone the repository](#clone-the-repository)
+    - [.env.local file](#envlocal-file)
+    - [Install dependencies](#install-dependencies)
+    - [Run the development server](#run-the-development-server)
+    - [Access the application](#access-the-application)
+    - [Learn More](#learn-more)
+  - [Architecture and Design Patterns Used](#architecture-and-design-patterns-used)
+    - [Dependency Inversion Principle (DIP)](#dependency-inversion-principle-dip)
+    - [Layered Architecture (Layered Pattern)](#layered-architecture-layered-pattern)
+    - [Repository Pattern](#repository-pattern)
+    - [Entity Pattern](#entity-pattern)
+    - [Presentation Component Pattern and Containers](#presentation-component-pattern-and-containers)
+    - [Centralized Error Handling Standard](#centralized-error-handling-standard)
+    - [Screaming Architecture](#screaming-architecture)
+  - [Domain Model](#domain-model)
+    - [Key Entities](#key-entities)
+    - [Relationships](#relationships)
+    - [Design Rationale](#design-rationale)
+  - [Lighthouse results](#lighthouse-results)
+  - [Features](#features)
+  - [Technologies and Tools used](#technologies-and-tools-used)
+  - [Contribution](#contribution)
+  - [Project Status](#project-status)
+  - [Project Developer](#project-developer)
+
 <br>
 
 ### **DEPLOY**: <br> https://a-safe-technical-test.vercel.app
@@ -47,25 +81,14 @@ kevinvdsd@asafe.com
 mPJfMERwCA
 ```
 
-<p>
+You can use the following credentials to access the application deployed on **Vercel**. Additionally, if you'd like to
+run the project locally, you can **add these credentials to your own .env.local file**.
 
-    You can use the following credentials to access the application deployed on Vercel.
-    Additionally, if you'd like to run the project locally, you can add these credentials
-    to your own .env.local file.
+These data are used for authentication purposes within the application. They represent a mock email and password for
+development and testing. You may define them with **your own values** during local development.
 
-</p>
-
-<p>
-
-    These data are used for authentication purposes within the application.
-    They represent a mock email and password for development and testing.
-    You may define them with your own values during local development.
-
-    Note: In a real-world scenario, authentication should be handled by a secure back-end
-    service. Sensitive user data (like passwords) should never be hard-coded or stored in
-    environment variables for production environments.
-
-</p>
+**Note: In a real-world scenario, authentication should be handled by a secure back-end service. Sensitive user data
+(like passwords) should never be hard-coded or stored in environment variables for production environments.**
 
 <br>
 
@@ -87,8 +110,6 @@ Before running this project locally, ensure that you have the following tools in
 - **Git** <br> For cloning the repository. <br> Version control tool to clone the repository. Install from
   [here](https://git-scm.com/).
 
-<br>
-
 ### Clone the repository
 
 Clone the repository to your local machine using the following command:
@@ -97,24 +118,16 @@ Clone the repository to your local machine using the following command:
   git clone https://github.com/KevinVanDerSchans/a-safe-technical-test.git
 ```
 
-## .env.local file
+### .env.local file
 
 Make sure to create a .env.local file in the project root for the necessary environment variables.
 
-## Install dependencies
+### Install dependencies
 
 Install the project dependencies using the following command:
 
 ```sh
   npm install
-```
-
-## Run the development server
-
-Run the development server to verify everything is working correctly:
-
-```sh
-  npm run dev
 ```
 
 Compile and Minify for Production
@@ -129,11 +142,19 @@ Lint with [ESLint](https://eslint.org/)
   npm run lint
 ```
 
-## Access the application
+### Run the development server
+
+Run the development server to verify everything is working correctly:
+
+```sh
+  npm run dev
+```
+
+### Access the application
 
 Open your browser and navigate to http://localhost:3000/ to see the application running.
 
-## Learn More
+### Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -248,7 +269,7 @@ data persistence.
 ### Design Rationale
 
 This domain model was designed to maintain separation between the core business logic and external layers. The use of
-interfaces and type safety (via **TypeScript**) ensures that the structure of these entities remains robust and
+interfaces and type safety (via **_TypeScript_**) ensures that the structure of these entities remains robust and
 flexible. By encapsulating attributes and defining relationships clearly, the model remains adaptable to future changes
 in business requirements without affecting other layers of the application.
 
