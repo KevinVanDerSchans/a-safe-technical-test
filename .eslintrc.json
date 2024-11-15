@@ -17,7 +17,7 @@
     "react/prop-types": "off",
     "eqeqeq": ["error", "always"]
   },
-  "ignorePatterns": ["generateProjectStructure.js"],
+  "ignorePatterns": ["generateProjectStructure.js", "testing", "jest.setup.js", "cypress.config.ts"],
   "settings": {
     "import/resolver": {
       "typescript": {
@@ -25,5 +25,13 @@
         "project": "./tsconfig.json"
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": ["tests/**/*"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }

@@ -6,8 +6,9 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "commonjs",
+    "target": "esnext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -29,7 +30,6 @@
       "@utils/*": ["src/shared/utils/*"],
       "@svgs/*": ["public/svgs/*"],
       "@styles/*": ["styles/*"],
-
       "@users/*": ["src/presentation/features/users/*"],
       "@posts/*": ["src/presentation/features/posts/*"],
       "@customers/*": ["src/presentation/features/customers/*"],
@@ -45,6 +45,14 @@
     ],
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["next.config.mjs", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next.config.mjs",
+    "next-env.d.ts",
+    "jest.config.ts",
+    "cypress.config.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }
