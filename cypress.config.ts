@@ -10,7 +10,7 @@ export default defineConfig({
     useInlineDiffs: true,
     embeddedScreenshots: true,
     reportDir: 'testing/cypress-reports',
-    reportFilename: 'cypress-report.html',
+    reportFilename: 'mochawesome.html',
     overwrite: true,
     html: true,
     json: true,

@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-11-17T20:17:55.319Z",
-    "end": "2024-11-17T20:18:04.379Z",
-    "duration": 9060,
+    "start": "2024-11-17T22:49:16.923Z",
+    "end": "2024-11-17T22:49:28.025Z",
+    "duration": 11102,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8eaf4d0c-6886-492f-af33-5acc7c69cbda",
+      "uuid": "4012f624-7d06-4091-b814-3f4e1f735769",
       "title": "",
       "fullFile": "cypress\\e2e\\login.cy.ts",
       "file": "cypress\\e2e\\login.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f9ca9d7a-1a27-485f-9516-9f624d51e6d4",
+          "uuid": "ad433688-cd54-479f-ac63-311899434c8e",
           "title": "User Authentication and Navigation to Home Page",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "should successfully log in with valid credentials and navigate to the home page",
               "fullTitle": "User Authentication and Navigation to Home Page should successfully log in with valid credentials and navigate to the home page",
               "timedOut": null,
-              "duration": 8893,
+              "duration": 10907,
               "state": "passed",
-              "speed": "medium",
+              "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit('/login');\ncy.get('input[name=\"email\"]').type(Cypress.env('email'));\ncy.get('input[name=\"password\"]').type(Cypress.env('password'));\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('not.include', '/login');\ncy.visit('/');\ncy.url().should('eq', Cypress.config('baseUrl') + '/');",
               "err": {},
-              "uuid": "475c8847-bcb7-4e9d-ad49-8733a7fbe18d",
-              "parentUUID": "f9ca9d7a-1a27-485f-9516-9f624d51e6d4",
+              "uuid": "c66b4400-83a9-46d7-be93-2d9c89893e6e",
+              "parentUUID": "ad433688-cd54-479f-ac63-311899434c8e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "475c8847-bcb7-4e9d-ad49-8733a7fbe18d"
+            "c66b4400-83a9-46d7-be93-2d9c89893e6e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8893,
+          "duration": 10907,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -83,7 +83,7 @@
     "mochawesome": {
       "options": {
         "quiet": false,
-        "reportFilename": "cypress-report.html",
+        "reportFilename": "mochawesome.html",
         "saveHtml": true,
         "saveJson": true,
         "consoleReporter": "spec",
@@ -97,7 +97,7 @@
         "useInlineDiffs": true,
         "embeddedScreenshots": true,
         "reportDir": "testing/cypress-reports",
-        "reportFilename": "cypress-report.html",
+        "reportFilename": "mochawesome.html",
         "overwrite": true,
         "html": true,
         "json": true
