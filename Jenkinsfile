@@ -3,7 +3,13 @@ pipeline {
     stages {
         stage('Clean Workspace') {
             steps {
-                bat 'if exist node_modules rmdir /s /q node_modules'
+                cleanWs()
+            }
+        }
+        stage('Verify Environment') {
+            steps {
+                bat 'node -v'
+                bat 'npm -v'
             }
         }
         stage('Install dependencies') {
@@ -11,15 +17,28 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Run tests') {
+        stage('Run Jest tests') {
             steps {
                 bat 'npm run test:ci'
+            }
+        }
+        stage('Run Cypress tests') {
+            steps {
+                bat 'npm run cypress:run'
             }
         }
     }
     post {
         always {
-            junit 'testing/junit.xml'
+            junit '**/testing/*.xml'
+        }
+    }
+    post {
+        success {
+            echo 'Build Successful!'
+        }
+        failure {
+            echo 'Build Failed!'
         }
     }
 }

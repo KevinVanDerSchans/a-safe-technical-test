@@ -125,7 +125,7 @@ const customJestConfig: Config = {
       'jest-junit',
       {
         outputDirectory: './testing',
-        outputName: 'junit.xml',
+        outputName: 'jest-junit.xml',
       },
     ],
     [
