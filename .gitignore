@@ -16,7 +16,6 @@
 # testing
 /coverage
 jest-stare/
-test-results/
 cypress.env.json
 
 # next.js
