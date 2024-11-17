@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -50,9 +51,12 @@
     "next-env.d.ts",
     "jest.config.ts",
     "cypress.config.ts",
+    "tests/**/*",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "cypress.config.ts"]
 }

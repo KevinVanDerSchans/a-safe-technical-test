@@ -28,7 +28,15 @@ const customJestConfig: Config = {
   collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  // collectCoverageFrom: undefined,
+  collectCoverageFrom: [
+    '**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!<rootDir>/out/**',
+    '!<rootDir>/.next/**',
+    '!<rootDir>/*.config.js',
+    '!<rootDir>/coverage/**',
+  ],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
@@ -107,13 +115,35 @@ const customJestConfig: Config = {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: undefined,
+  preset: 'ts-jest',
 
   // Run tests from one or more projects
   // projects: undefined,
 
   // Use this configuration option to add custom reporters to Jest
-  // reporters: undefined,
+  reporters: [
+    'default',
+    [
+      'jest-junit',
+      {
+        outputDirectory: './test-results',
+        outputName: 'junit.xml',
+      },
+    ],
+    [
+      'jest-stare',
+      {
+        resultDir: 'jest-stare',
+        reportTitle: 'Jest Stare Report',
+        additionalResultsProcessors: ['jest-junit'],
+        coverageLink: '../coverage/lcov-report/index.html',
+        jestStareConfigJson: 'jest-stare.json',
+        jestGlobalConfigJson: 'jest-global-config.json',
+      },
+    ],
+  ],
+
+  watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
 
   // Automatically reset mock state before every test
   // resetMocks: false,
@@ -160,15 +190,10 @@ const customJestConfig: Config = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  // testMatch: [
-  //   "**/__tests__/**/*.[jt]s?(x)",
-  //   "**/?(*.)+(spec|test).[tj]s?(x)"
-  // ],
+  testMatch: ['**/?(*.)+(test|spec).[jt]s?(x)'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  // testPathIgnorePatterns: [
-  //   "\\\\node_modules\\\\"
-  // ],
+  // testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/', '<rootDir>/src/.*\\.tsx$'],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
@@ -181,11 +206,13 @@ const customJestConfig: Config = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    // Use babel-jest to transpile tests with the next/babel preset
+    // https://jestjs.io/docs/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  transformIgnorePatterns: ['/node_modules/', '^.+\\.module\\.(css|sass|scss)$'],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
@@ -194,7 +221,7 @@ const customJestConfig: Config = {
   verbose: true,
 
   // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
-  // watchPathIgnorePatterns: [],
+  watchPathIgnorePatterns: ['jest-stare'],
 
   // Whether to use watchman for file crawling
   // watchman: true,

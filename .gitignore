@@ -15,17 +15,21 @@
 
 # testing
 /coverage
+jest-stare/
+test-results/
 cypress.env.json
 
 # next.js
 /.next/
 /out/
+.swc/
 
 # production
 /build
 generateProjectStructure.js
 structure.txt
 nextSetUp.md
+generate-tree/
 
 # misc
 .DS_Store
