@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="11.925" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-11-17T19:43:55" tests="0" file="cypress\e2e\login.cy.ts" failures="0" time="0">
+  </testsuite>
+  <testsuite name="User Authentication and Navigation to Home Page" timestamp="2024-11-17T19:43:55" tests="1" failures="0" time="11.925">
+    <testcase name="User Authentication and Navigation to Home Page should successfully log in with valid credentials and navigate to the home page" time="11.925" classname="should successfully log in with valid credentials and navigate to the home page" failure="false" error="false" success="true">
+    </testcase>
+  </testsuite>
+</testsuites>
