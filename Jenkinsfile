@@ -27,13 +27,24 @@ pipeline {
                 bat 'npm run cypress:run'
             }
         }
-    }
-    post {
-        always {
-            junit '**/testing/*.xml'
+        stage('Generate Mochawesome Report') {
+            steps {
+                bat 'npx mochawesome-merge testing/cypress-reports/*.json > testing/cypress-reports/mochawesome.json'
+                bat 'npx mochawesome-report-generator testing/cypress-reports/mochawesome.json'
+            }
         }
     }
     post {
+        always {
+            publishHTML(target: [
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'testing/cypress-reports',
+                reportFiles: 'cypress.report.html',
+                reportName: 'Mochawesome Test Report'
+            ])
+        }
         success {
             echo 'Build Successful!'
         }

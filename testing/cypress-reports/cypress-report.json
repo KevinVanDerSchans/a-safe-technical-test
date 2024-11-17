@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-17T20:17:55.319Z",
+    "end": "2024-11-17T20:18:04.379Z",
+    "duration": 9060,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8eaf4d0c-6886-492f-af33-5acc7c69cbda",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.ts",
+      "file": "cypress\\e2e\\login.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f9ca9d7a-1a27-485f-9516-9f624d51e6d4",
+          "title": "User Authentication and Navigation to Home Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should successfully log in with valid credentials and navigate to the home page",
+              "fullTitle": "User Authentication and Navigation to Home Page should successfully log in with valid credentials and navigate to the home page",
+              "timedOut": null,
+              "duration": 8893,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/login');\ncy.get('input[name=\"email\"]').type(Cypress.env('email'));\ncy.get('input[name=\"password\"]').type(Cypress.env('password'));\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('not.include', '/login');\ncy.visit('/');\ncy.url().should('eq', Cypress.config('baseUrl') + '/');",
+              "err": {},
+              "uuid": "475c8847-bcb7-4e9d-ad49-8733a7fbe18d",
+              "parentUUID": "f9ca9d7a-1a27-485f-9516-9f624d51e6d4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "475c8847-bcb7-4e9d-ad49-8733a7fbe18d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8893,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "cypress-report.html",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "useInlineDiffs": true,
+        "embeddedScreenshots": true,
+        "reportDir": "testing/cypress-reports",
+        "reportFilename": "cypress-report.html",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

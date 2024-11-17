@@ -5,10 +5,14 @@ export default defineConfig({
     setupNodeEvents(on, config) {},
     baseUrl: 'http://localhost:3000',
   },
-  reporter: 'cypress-junit-reporter',
+  reporter: 'mochawesome',
   reporterOptions: {
-    mochaFile: 'testing/cypress-junit.xml',
-    toConsole: true,
-    suiteTitleSeparatedBy: '.',
+    useInlineDiffs: true,
+    embeddedScreenshots: true,
+    reportDir: 'testing/cypress-reports',
+    reportFilename: 'cypress-report.html',
+    overwrite: true,
+    html: true,
+    json: true,
   },
 })
